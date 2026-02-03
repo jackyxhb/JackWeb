@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Jack's App Portal - Home to CVAgent and ETPattern apps. Find support, privacy policies, and learn more about our iOS applications.">
+    <title>Jack's App Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Animated gradient background */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background:
+                radial-gradient(ellipse at 20% 20%, rgba(120, 80, 200, 0.3) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(255, 107, 107, 0.2) 0%, transparent 50%),
+                radial-gradient(ellipse at 40% 80%, rgba(78, 205, 196, 0.2) 0%, transparent 50%),
+                linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            animation: gradientShift 15s ease infinite alternate;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 20px 80px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff 0%, #a8edea 50%, #fed6e3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* App Cards Grid */
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+            flex: 1;
+        }
+
+        .app-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 40px 32px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .app-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            border-radius: 24px 24px 0 0;
+        }
+
+        .app-card.cvagent::before {
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .app-card.etpattern::before {
+            background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .app-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.3),
+                0 0 40px rgba(120, 80, 200, 0.1);
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .cvagent .app-icon {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .etpattern .app-icon {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .app-card h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        .app-card .description {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 28px;
+        }
+
+        .card-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .card-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 20px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .card-link:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(8px);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .card-link .icon {
+            font-size: 1.25rem;
+        }
+
+        .card-link .arrow {
+            margin-left: auto;
+            opacity: 0;
+            transform: translateX(-8px);
+            transition: all 0.3s ease;
+        }
+
+        .card-link:hover .arrow {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.875rem;
+        }
+
+        footer a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 16px;
+            }
+
+            .hero {
+                padding: 40px 16px 60px;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .apps-grid {
+                gap: 20px;
+            }
+
+            .app-card {
+                padding: 32px 24px;
+            }
+        }
+
+        /* Subtle floating animation for cards */
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .app-card:nth-child(1) {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .app-card:nth-child(2) {
+            animation: float 6s ease-in-out infinite 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-gradient"></div>
+
+    <div class="container">
+        <header class="hero">
+            <h1>Jack's App Portal</h1>
+            <p>Discover powerful iOS apps designed to boost your productivity and learning. Built with privacy in mind.
+            </p>
+        </header>
+
+        <main class="apps-grid">
+            <!-- CVAgent Card -->
+            <article class="app-card cvagent">
+                <div class="app-icon">📄</div>
+                <h2>CVAgent</h2>
+                <p class="description">Your AI-powered assistant for creating professional, tailored CVs and cover
+                    letters that stand out.</p>
+                <nav class="card-links">
+                    <a href="CVAgentSupport.html" class="card-link">
+                        <span class="icon">💬</span>
+                        <span>Support & FAQ</span>
+                        <span class="arrow">→</span>
+                    </a>
+                    <a href="PrivacyPolicyforCVAgent.html" class="card-link">
+                        <span class="icon">🔒</span>
+                        <span>Privacy Policy</span>
+                        <span class="arrow">→</span>
+                    </a>
+                </nav>
+            </article>
+
+            <!-- ETPattern Card -->
+            <article class="app-card etpattern">
+                <div class="app-icon">🧠</div>
+                <h2>ETPattern</h2>
+                <p class="description">Master English through effective pattern recognition and spaced repetition
+                    learning.</p>
+                <nav class="card-links">
+                    <a href="ETPatternSupport.html" class="card-link">
+                        <span class="icon">💬</span>
+                        <span>Support & FAQ</span>
+                        <span class="arrow">→</span>
+                    </a>
+                    <a href="PrivacyPolicyforETPattern.html" class="card-link">
+                        <span class="icon">🔒</span>
+                        <span>Privacy Policy</span>
+                        <span class="arrow">→</span>
+                    </a>
+                </nav>
+            </article>
+        </main>
+
+        <footer>
+            <p>Made with ❤️ by Jack · <a href="mailto:jackyxhb@gmail.com">Contact</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>
+</CodeContent>
+<parameter name="EmptyFile">false
