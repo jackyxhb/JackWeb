@@ -8,7 +8,8 @@
         content="Jack's App Portal - Home to CVAgent and ETPattern apps. Find support, privacy policies, and learn more about our iOS applications.">
     <meta name="theme-color" content="#ffffff">
     <meta property="og:title" content="Jack's App Portal">
-    <meta property="og:description" content="Discover powerful iOS apps designed to boost your productivity and learning.">
+    <meta property="og:description"
+        content="Discover powerful iOS apps designed to boost your productivity and learning.">
     <meta property="og:type" content="website">
     <title>Jack's App Portal</title>
 
@@ -108,7 +109,7 @@
         .app-icon {
             width: 80px;
             height: 80px;
-            border-radius: var(--radius-2xl);
+            border-radius: 0;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -118,11 +119,11 @@
         }
 
         .cvagent .app-icon {
-            background: var(--color-navy);
+            background: url('assets/images/cvagent-icon.png') center/cover no-repeat;
         }
 
         .etpattern .app-icon {
-            background: var(--color-pink);
+            background: url('assets/images/etpattern-icon.png') center/cover no-repeat;
         }
 
         .app-title {
@@ -227,7 +228,8 @@
             <!-- Hero Section -->
             <header class="hero">
                 <h1 class="hero-title">Jack's App Portal</h1>
-                <p class="hero-subtitle">Discover powerful iOS apps designed to boost your productivity and learning. Built with privacy in mind.</p>
+                <p class="hero-subtitle">Discover powerful iOS apps designed to boost your productivity and learning.
+                    Built with privacy in mind.</p>
             </header>
 
             <!-- Apps Grid -->
@@ -235,10 +237,11 @@
                 <!-- CVAgent Card -->
                 <article class="glass-card cvagent app-card">
                     <div class="app-card-header">
-                        <div class="app-icon">📄</div>
+                        <div class="app-icon" aria-label="CVAgent app icon"></div>
                         <h2 class="app-title">CVAgent</h2>
                     </div>
-                    <p class="description">Your AI-powered assistant for creating professional, tailored CVs and cover letters that stand out.</p>
+                    <p class="description">Your AI-powered assistant for creating professional, tailored CVs and cover
+                        letters that stand out.</p>
                     <nav class="card-links">
                         <a href="CVAgentSupport.html" class="card-link">
                             <span>💬</span>
@@ -256,10 +259,11 @@
                 <!-- ETPattern Card -->
                 <article class="glass-card etpattern app-card">
                     <div class="app-card-header">
-                        <div class="app-icon">🧠</div>
+                        <div class="app-icon" aria-label="ETPattern app icon"></div>
                         <h2 class="app-title">ETPattern</h2>
                     </div>
-                    <p class="description">Master English through effective pattern recognition and spaced repetition learning.</p>
+                    <p class="description">Master English through effective pattern recognition and spaced repetition
+                        learning.</p>
                     <nav class="card-links">
                         <a href="ETPatternSupport.html" class="card-link">
                             <span>💬</span>

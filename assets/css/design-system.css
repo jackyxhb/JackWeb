@@ -26,15 +26,15 @@
   --color-navy: #002783;
   --color-navy-dark: #001a5f;
   --color-navy-light: #003da5;
-  --color-pink: #ffa9e7;
-  --color-pink-dark: #ff7dd8;
-  --color-pink-light: #ffc4ed;
+  --color-teal: #06b6d4;
+  --color-teal-dark: #0891b2;
+  --color-teal-light: #22d3ee;
 
   /* Accent Colors (Legacy - mapped to brand colors) */
   --accent-cvagent: #002783;
   --accent-cvagent-dark: #001a5f;
-  --accent-etpattern: #ffa9e7;
-  --accent-etpattern-dark: #ff7dd8;
+  --accent-etpattern: #06b6d4;
+  --accent-etpattern-dark: #0891b2;
   --accent-teal: #78cdd1;
   --accent-coral: #ff6b6b;
   --accent-success: #51cf66;
@@ -58,6 +58,7 @@
   --font-regular: 400;
   --font-semibold: 600;
   --font-bold: 700;
+  --font-extrabold: 800;
 
   /* Type Scale - Fixed sizes for clarity */
   --text-4xl: 42px;
@@ -155,7 +156,7 @@
   --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.4);
   --shadow-xl: 0 20px 32px rgba(0, 0, 0, 0.5);
   --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-glow: 0 0 20px rgba(255, 169, 231, 0.2);
+  --shadow-glow: 0 0 20px rgba(6, 182, 212, 0.2);
 }
 
 /* ========================================

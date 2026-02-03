@@ -568,8 +568,8 @@ details[open] .chevron {
 }
 
 .version-badge.etpattern {
-  background: var(--color-pink);
-  color: var(--color-navy);
+  background: var(--color-teal);
+  color: #ffffff;
 }
 
 /* ========================================
@@ -579,8 +579,8 @@ details[open] .chevron {
 .category-badge {
   display: inline-block;
   padding: 0.25rem 0.75rem;
-  background: var(--color-pink);
-  color: var(--color-navy);
+  background: var(--color-teal);
+  color: #ffffff;
   border-radius: var(--radius-full);
   font-size: var(--text-xs);
   font-weight: var(--font-semibold);
