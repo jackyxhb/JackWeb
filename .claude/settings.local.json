@@ -5,7 +5,8 @@
       "Bash(git config:*)",
       "Bash(wc:*)",
       "Bash(ls:*)",
-      "WebFetch(domain:www.uxdesigninstitute.com)"
+      "WebFetch(domain:www.uxdesigninstitute.com)",
+      "Bash(file:*)"
     ]
   }
 }
