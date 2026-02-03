@@ -1,0 +1,25 @@
+<svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cvagent-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="192" height="192" fill="url(#cvagent-gradient)" rx="48"/>
+
+  <!-- Document/CV icon -->
+  <g transform="translate(48, 40)">
+    <!-- Document outline -->
+    <path d="M 8 0 L 88 0 Q 96 0 96 8 L 96 104 Q 96 112 88 112 L 8 112 Q 0 112 0 104 L 0 8 Q 0 0 8 0"
+          fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/>
+
+    <!-- Lines (text representation) -->
+    <line x1="16" y1="24" x2="80" y2="24" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <line x1="16" y1="40" x2="80" y2="40" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <line x1="16" y1="56" x2="60" y2="56" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <line x1="16" y1="80" x2="80" y2="80" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <line x1="16" y1="96" x2="70" y2="96" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

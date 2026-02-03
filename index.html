@@ -1,209 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Jack's App Portal - Home to CVAgent and ETPattern apps. Find support, privacy policies, and learn more about our iOS applications.">
+    <meta name="theme-color" content="#1a1a2e">
+    <meta property="og:title" content="Jack's App Portal">
+    <meta property="og:description" content="Discover powerful iOS apps designed to boost your productivity and learning.">
+    <meta property="og:type" content="website">
     <title>Jack's App Portal</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/portal-icon.svg">
+    <link rel="apple-touch-icon" href="assets/images/portal-icon.svg">
+
+    <!-- Font Loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/design-system.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <!-- Portal-specific styles -->
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            color: #ffffff;
-            overflow-x: hidden;
-        }
-
-        /* Animated gradient background */
-        .bg-gradient {
+        /* Navigation bar */
+        body::after {
+            content: '';
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background:
-                radial-gradient(ellipse at 20% 20%, rgba(120, 80, 200, 0.3) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 80%, rgba(255, 107, 107, 0.2) 0%, transparent 50%),
-                radial-gradient(ellipse at 40% 80%, rgba(78, 205, 196, 0.2) 0%, transparent 50%),
-                linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            animation: gradientShift 15s ease infinite alternate;
+            right: 0;
+            height: 70px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(var(--glass-blur));
+            border-bottom: 1px solid var(--glass-border);
+            z-index: var(--z-fixed);
+            pointer-events: none;
         }
 
-        @keyframes gradientShift {
-            0% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0.8;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 60px 20px 80px;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 800;
-            background: linear-gradient(135deg, #ffffff 0%, #a8edea 50%, #fed6e3 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 16px;
-            letter-spacing: -0.02em;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: rgba(255, 255, 255, 0.7);
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        /* App Cards Grid */
-        .apps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            padding: 20px 0;
-            flex: 1;
-        }
-
-        .app-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border-radius: 24px;
-            padding: 40px 32px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        .wrapper {
             position: relative;
-            overflow: hidden;
+            padding-top: 70px;
         }
 
-        .app-card::before {
-            content: '';
-            position: absolute;
+        .portal-nav {
+            position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
-            border-radius: 24px 24px 0 0;
+            z-index: var(--z-fixed);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--space-4) var(--space-6);
+            background: var(--glass-bg);
+            backdrop-filter: blur(var(--glass-blur));
+            border-bottom: 1px solid var(--glass-border);
         }
 
-        .app-card.cvagent::before {
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        .portal-nav-brand {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-size: var(--text-lg);
+            font-weight: var(--font-bold);
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color var(--transition-base);
         }
 
-        .app-card.etpattern::before {
-            background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+        .portal-nav-brand:hover {
+            color: var(--accent-cvagent);
         }
 
-        .app-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            border-color: rgba(255, 255, 255, 0.2);
-            box-shadow:
-                0 20px 60px rgba(0, 0, 0, 0.3),
-                0 0 40px rgba(120, 80, 200, 0.1);
+        .portal-nav-spacer {
+            flex: 1;
+        }
+
+        @media (max-width: 768px) {
+            .portal-nav {
+                padding: var(--space-3) var(--space-4);
+            }
+        }
+
+        /* Hero override */
+        .hero {
+            padding-top: 40px;
+            padding-bottom: var(--space-20);
+            animation: page-enter 0.6s ease-out;
+        }
+
+        .hero-title {
+            background: linear-gradient(135deg, var(--accent-cvagent) 0%, var(--accent-etpattern) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Apps grid */
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--space-8);
+            margin-bottom: var(--space-16);
+        }
+
+        .app-card {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-6);
+        }
+
+        .app-card-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
         }
 
         .app-icon {
             width: 80px;
             height: 80px;
-            border-radius: 20px;
+            border-radius: var(--radius-2xl);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 2.5rem;
-            margin-bottom: 24px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            box-shadow: var(--shadow-lg);
+            flex-shrink: 0;
         }
 
         .cvagent .app-icon {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--accent-cvagent) 0%, var(--accent-cvagent-dark) 100%);
         }
 
         .etpattern .app-icon {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, var(--accent-etpattern) 0%, var(--accent-etpattern-dark) 100%);
         }
 
-        .app-card h2 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: #ffffff;
+        .app-title {
+            font-size: var(--text-2xl);
+            font-weight: var(--font-bold);
+            margin: 0;
+        }
+
+        .app-card.glass-card {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .app-card:nth-child(1) {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .app-card:nth-child(2) {
+            animation: fadeInUp 0.6s ease-out 0.1s backwards;
         }
 
         .app-card .description {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 28px;
+            color: var(--text-secondary);
+            line-height: var(--leading-relaxed);
+            margin: 0;
         }
 
         .card-links {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: var(--space-3);
+            margin-top: auto;
         }
 
         .card-link {
             display: flex;
             align-items: center;
-            gap: 12px;
-            padding: 14px 20px;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
+            gap: var(--space-2);
+            padding: var(--space-3) var(--space-4);
+            background: var(--bg-overlay-medium);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            color: var(--text-primary);
             text-decoration: none;
-            color: #ffffff;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            font-weight: var(--font-semibold);
+            transition: all var(--transition-base);
         }
 
         .card-link:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateX(8px);
-            border-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .card-link .icon {
-            font-size: 1.25rem;
+            background: var(--bg-overlay-dark);
+            border-color: var(--border-medium);
+            transform: translateX(4px);
         }
 
         .card-link .arrow {
             margin-left: auto;
             opacity: 0;
-            transform: translateX(-8px);
-            transition: all 0.3s ease;
+            transform: translateX(-4px);
+            transition: all var(--transition-base);
         }
 
         .card-link:hover .arrow {
@@ -211,126 +205,101 @@
             transform: translateX(0);
         }
 
-        /* Footer */
+        /* Footer override */
         footer {
-            text-align: center;
-            padding: 40px 20px;
-            color: rgba(255, 255, 255, 0.4);
-            font-size: 0.875rem;
+            margin-top: auto;
+            padding-top: var(--space-12);
         }
 
-        footer a {
-            color: rgba(255, 255, 255, 0.6);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
-            color: #ffffff;
-        }
-
-        /* Responsive adjustments */
         @media (max-width: 768px) {
-            .container {
-                padding: 20px 16px;
-            }
-
-            .hero {
-                padding: 40px 16px 60px;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
             .apps-grid {
-                gap: 20px;
+                gap: var(--space-6);
             }
 
-            .app-card {
-                padding: 32px 24px;
+            .app-icon {
+                width: 64px;
+                height: 64px;
+                font-size: 2rem;
             }
-        }
-
-        /* Subtle floating animation for cards */
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        .app-card:nth-child(1) {
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .app-card:nth-child(2) {
-            animation: float 6s ease-in-out infinite 0.5s;
         }
     </style>
 </head>
 
 <body>
-    <div class="bg-gradient"></div>
+    <div class="wrapper">
+        <!-- Navigation Bar -->
+        <nav class="portal-nav">
+            <a href="index.html" class="portal-nav-brand">
+                <span>🌍 Jack's Portal</span>
+            </a>
+            <div class="portal-nav-spacer"></div>
+            <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle theme">
+                <span class="icon-sun">☀️</span>
+                <span class="icon-moon">🌙</span>
+            </button>
+        </nav>
 
-    <div class="container">
-        <header class="hero">
-            <h1>Jack's App Portal</h1>
-            <p>Discover powerful iOS apps designed to boost your productivity and learning. Built with privacy in mind.
-            </p>
-        </header>
+        <div class="container">
+            <!-- Hero Section -->
+            <header class="hero">
+                <h1 class="hero-title">Jack's App Portal</h1>
+                <p class="hero-subtitle">Discover powerful iOS apps designed to boost your productivity and learning. Built with privacy in mind.</p>
+            </header>
 
-        <main class="apps-grid">
-            <!-- CVAgent Card -->
-            <article class="app-card cvagent">
-                <div class="app-icon">📄</div>
-                <h2>CVAgent</h2>
-                <p class="description">Your AI-powered assistant for creating professional, tailored CVs and cover
-                    letters that stand out.</p>
-                <nav class="card-links">
-                    <a href="CVAgentSupport.html" class="card-link">
-                        <span class="icon">💬</span>
-                        <span>Support & FAQ</span>
-                        <span class="arrow">→</span>
-                    </a>
-                    <a href="PrivacyPolicyforCVAgent.html" class="card-link">
-                        <span class="icon">🔒</span>
-                        <span>Privacy Policy</span>
-                        <span class="arrow">→</span>
-                    </a>
-                </nav>
-            </article>
+            <!-- Apps Grid -->
+            <main class="apps-grid">
+                <!-- CVAgent Card -->
+                <article class="glass-card cvagent app-card">
+                    <div class="app-card-header">
+                        <div class="app-icon">📄</div>
+                        <h2 class="app-title">CVAgent</h2>
+                    </div>
+                    <p class="description">Your AI-powered assistant for creating professional, tailored CVs and cover letters that stand out.</p>
+                    <nav class="card-links">
+                        <a href="CVAgentSupport.html" class="card-link">
+                            <span>💬</span>
+                            <span>Support & FAQ</span>
+                            <span class="arrow">→</span>
+                        </a>
+                        <a href="PrivacyPolicyforCVAgent.html" class="card-link">
+                            <span>🔒</span>
+                            <span>Privacy Policy</span>
+                            <span class="arrow">→</span>
+                        </a>
+                    </nav>
+                </article>
 
-            <!-- ETPattern Card -->
-            <article class="app-card etpattern">
-                <div class="app-icon">🧠</div>
-                <h2>ETPattern</h2>
-                <p class="description">Master English through effective pattern recognition and spaced repetition
-                    learning.</p>
-                <nav class="card-links">
-                    <a href="ETPatternSupport.html" class="card-link">
-                        <span class="icon">💬</span>
-                        <span>Support & FAQ</span>
-                        <span class="arrow">→</span>
-                    </a>
-                    <a href="PrivacyPolicyforETPattern.html" class="card-link">
-                        <span class="icon">🔒</span>
-                        <span>Privacy Policy</span>
-                        <span class="arrow">→</span>
-                    </a>
-                </nav>
-            </article>
-        </main>
+                <!-- ETPattern Card -->
+                <article class="glass-card etpattern app-card">
+                    <div class="app-card-header">
+                        <div class="app-icon">🧠</div>
+                        <h2 class="app-title">ETPattern</h2>
+                    </div>
+                    <p class="description">Master English through effective pattern recognition and spaced repetition learning.</p>
+                    <nav class="card-links">
+                        <a href="ETPatternSupport.html" class="card-link">
+                            <span>💬</span>
+                            <span>Support & FAQ</span>
+                            <span class="arrow">→</span>
+                        </a>
+                        <a href="PrivacyPolicyforETPattern.html" class="card-link">
+                            <span>🔒</span>
+                            <span>Privacy Policy</span>
+                            <span class="arrow">→</span>
+                        </a>
+                    </nav>
+                </article>
+            </main>
 
-        <footer>
-            <p>Made with ❤️ by Jack · <a href="mailto:jackyxhb@gmail.com">Contact</a></p>
-        </footer>
+            <!-- Footer -->
+            <footer>
+                <p>Made with ❤️ by Jack · <a href="mailto:jackyxhb@gmail.com">Contact</a></p>
+            </footer>
+        </div>
     </div>
+
+    <!-- Theme Toggle Script -->
+    <script src="assets/js/theme-toggle.js"></script>
 </body>
 
 </html>
