@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="CVAgent Support - Get help with CVAgent, our AI-powered CV and cover letter generation tool. FAQs, troubleshooting, and support resources.">
-    <meta name="theme-color" content="#1a1a2e">
+    <meta name="theme-color" content="#ffffff">
     <title>CVAgent Support & FAQ</title>
 
     <!-- Favicons -->
@@ -36,9 +36,9 @@
             align-items: center;
             justify-content: space-between;
             padding: var(--space-4) var(--space-6);
-            background: var(--glass-bg);
-            backdrop-filter: blur(var(--glass-blur));
-            border-bottom: 1px solid var(--glass-border);
+            background: #ffffff;
+            border-bottom: 1px solid var(--border-subtle);
+            box-shadow: var(--shadow-sm);
         }
 
         .nav-left {
@@ -53,18 +53,19 @@
             justify-content: center;
             width: 44px;
             height: 44px;
-            background: var(--bg-overlay-medium);
+            background: transparent;
             border: 1px solid var(--border-subtle);
             border-radius: var(--radius-lg);
-            color: var(--text-primary);
+            color: var(--color-navy);
             text-decoration: none;
             font-size: var(--text-lg);
             transition: all var(--transition-base);
         }
 
         .nav-home:hover {
-            background: var(--bg-overlay-dark);
-            border-color: var(--border-medium);
+            background: var(--color-navy);
+            border-color: var(--color-navy);
+            color: #ffffff;
         }
 
         .nav-breadcrumbs {
@@ -81,7 +82,7 @@
         }
 
         .nav-breadcrumbs a:hover {
-            color: var(--accent-cvagent);
+            color: var(--color-navy);
         }
 
         .nav-breadcrumbs span {

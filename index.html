@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Jack's App Portal - Home to CVAgent and ETPattern apps. Find support, privacy policies, and learn more about our iOS applications.">
-    <meta name="theme-color" content="#1a1a2e">
+    <meta name="theme-color" content="#ffffff">
     <meta property="og:title" content="Jack's App Portal">
     <meta property="og:description" content="Discover powerful iOS apps designed to boost your productivity and learning.">
     <meta property="og:type" content="website">
@@ -28,21 +28,6 @@
 
     <!-- Portal-specific styles -->
     <style>
-        /* Navigation bar */
-        body::after {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 70px;
-            background: var(--glass-bg);
-            backdrop-filter: blur(var(--glass-blur));
-            border-bottom: 1px solid var(--glass-border);
-            z-index: var(--z-fixed);
-            pointer-events: none;
-        }
-
         .wrapper {
             position: relative;
             padding-top: 70px;
@@ -58,9 +43,9 @@
             align-items: center;
             justify-content: space-between;
             padding: var(--space-4) var(--space-6);
-            background: var(--glass-bg);
-            backdrop-filter: blur(var(--glass-blur));
-            border-bottom: 1px solid var(--glass-border);
+            background: #ffffff;
+            border-bottom: 1px solid var(--border-subtle);
+            box-shadow: var(--shadow-sm);
         }
 
         .portal-nav-brand {
@@ -69,13 +54,13 @@
             gap: var(--space-2);
             font-size: var(--text-lg);
             font-weight: var(--font-bold);
-            color: var(--text-primary);
+            color: var(--color-navy);
             text-decoration: none;
             transition: color var(--transition-base);
         }
 
         .portal-nav-brand:hover {
-            color: var(--accent-cvagent);
+            color: var(--color-navy-dark);
         }
 
         .portal-nav-spacer {
@@ -92,14 +77,11 @@
         .hero {
             padding-top: 40px;
             padding-bottom: var(--space-20);
-            animation: page-enter 0.6s ease-out;
+            animation: page-enter 0.4s ease-out;
         }
 
         .hero-title {
-            background: linear-gradient(135deg, var(--accent-cvagent) 0%, var(--accent-etpattern) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--color-navy);
         }
 
         /* Apps grid */
@@ -130,39 +112,40 @@
             align-items: center;
             justify-content: center;
             font-size: 2.5rem;
-            box-shadow: var(--shadow-lg);
+            box-shadow: var(--shadow-md);
             flex-shrink: 0;
         }
 
         .cvagent .app-icon {
-            background: linear-gradient(135deg, var(--accent-cvagent) 0%, var(--accent-cvagent-dark) 100%);
+            background: var(--color-navy);
         }
 
         .etpattern .app-icon {
-            background: linear-gradient(135deg, var(--accent-etpattern) 0%, var(--accent-etpattern-dark) 100%);
+            background: var(--color-pink);
         }
 
         .app-title {
             font-size: var(--text-2xl);
             font-weight: var(--font-bold);
             margin: 0;
+            color: var(--color-navy);
         }
 
         .app-card.glass-card {
-            animation: fadeInUp 0.6s ease-out;
+            animation: fade-in-up 0.4s ease-out;
         }
 
         .app-card:nth-child(1) {
-            animation: fadeInUp 0.6s ease-out;
+            animation: fade-in-up 0.4s ease-out;
         }
 
         .app-card:nth-child(2) {
-            animation: fadeInUp 0.6s ease-out 0.1s backwards;
+            animation: fade-in-up 0.4s ease-out 0.1s backwards;
         }
 
         .app-card .description {
             color: var(--text-secondary);
-            line-height: var(--leading-relaxed);
+            line-height: 1.7;
             margin: 0;
         }
 
@@ -178,18 +161,18 @@
             align-items: center;
             gap: var(--space-2);
             padding: var(--space-3) var(--space-4);
-            background: var(--bg-overlay-medium);
-            border: 1px solid var(--border-subtle);
+            background: transparent;
+            border: 2px solid var(--color-navy);
             border-radius: var(--radius-lg);
-            color: var(--text-primary);
+            color: var(--color-navy);
             text-decoration: none;
             font-weight: var(--font-semibold);
             transition: all var(--transition-base);
         }
 
         .card-link:hover {
-            background: var(--bg-overlay-dark);
-            border-color: var(--border-medium);
+            background: var(--color-navy);
+            color: #ffffff;
             transform: translateX(4px);
         }
 
