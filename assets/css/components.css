@@ -270,11 +270,10 @@
 
 .callout {
   background: var(--glass-bg);
-  backdrop-filter: blur(var(--glass-blur));
   border-left: 4px solid var(--color-navy);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
-  margin: var(--space-6) 0;
+  margin: 1.5rem 0;
 }
 
 .callout.accent-cvagent {
@@ -323,11 +322,10 @@
 
 .inline-toc {
   background: var(--glass-bg);
-  backdrop-filter: blur(var(--glass-blur));
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
-  margin: var(--space-6) 0;
+  margin: 1.5rem 0 2rem 0;
 }
 
 .inline-toc h3 {
@@ -388,8 +386,6 @@
 
 .glass-card:hover {
   border-color: var(--border-medium);
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {

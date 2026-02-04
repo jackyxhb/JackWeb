@@ -107,7 +107,7 @@
 
         /* Hero section */
         .hero-section {
-            padding: var(--space-16) 0 var(--space-20);
+            padding: var(--space-8) 0 var(--space-12);
             text-align: center;
             animation: fadeInDown 0.6s ease-out;
         }
@@ -135,10 +135,7 @@
         .hero-content h1 {
             font-size: var(--text-4xl);
             margin: 0 0 var(--space-2) 0;
-            background: linear-gradient(135deg, var(--accent-cvagent) 0%, var(--accent-cvagent-dark) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--color-navy);
         }
 
         .hero-content p {
@@ -175,17 +172,25 @@
             display: none;
         }
 
-        /* Section styles */
+        /* Section styles - blog article format */
         .section {
-            margin-bottom: 0.5rem;
+            margin-bottom: 2.5rem;
+            padding: 0 0 2.5rem 0;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
 
         .section-title {
             font-size: var(--text-2xl);
             font-weight: var(--font-bold);
-            margin-bottom: var(--space-6);
-            padding-bottom: var(--space-4);
-            border-bottom: 2px solid var(--border-subtle);
+            margin-bottom: 1rem;
+            padding: 0;
+            border: none;
             color: var(--text-primary);
         }
 
@@ -199,7 +204,6 @@
 
         .feature-card {
             background: var(--glass-bg);
-            backdrop-filter: blur(var(--glass-blur));
             border: 1px solid var(--glass-border);
             border-radius: var(--radius-lg);
             padding: var(--space-4);
@@ -210,7 +214,6 @@
         .feature-card:hover {
             background: var(--bg-overlay-medium);
             border-color: var(--border-medium);
-            transform: translateY(-4px);
         }
 
         .feature-icon {
@@ -258,7 +261,6 @@
         /* Requirements box - now inline before FAQ */
         .requirements-box {
             background: var(--glass-bg);
-            backdrop-filter: blur(var(--glass-blur));
             border-left: 4px solid var(--accent-cvagent);
             border-radius: var(--radius-lg);
             padding: var(--space-6);
@@ -315,7 +317,7 @@
         .contact-email {
             display: inline-block;
             padding: var(--space-3) var(--space-6);
-            background: linear-gradient(135deg, var(--accent-cvagent) 0%, var(--accent-cvagent-dark) 100%);
+            background: var(--color-navy);
             color: #ffffff;
             text-decoration: none;
             border-radius: var(--radius-lg);
@@ -324,7 +326,6 @@
         }
 
         .contact-email:hover {
-            transform: translateY(-2px);
             box-shadow: var(--shadow-lg);
         }
 
@@ -377,7 +378,7 @@
         <!-- Navigation -->
         <nav class="support-nav">
             <div class="nav-left">
-                <a href="index.html" class="nav-home" title="Back to Portal">🏠</a>
+                <a href="index.html" class="nav-home" title="Back to Portal">←</a>
                 <div class="nav-breadcrumbs">
                     <a href="index.html">Home</a>
                     <span>→</span>
@@ -413,19 +414,15 @@
                         <h2 class="section-title">Key Features</h2>
                         <div class="features-grid">
                             <div class="feature-card">
-                                <div class="feature-icon">🤖</div>
                                 <div class="feature-title">Multi-Provider AI</div>
                             </div>
                             <div class="feature-card">
-                                <div class="feature-icon">✨</div>
                                 <div class="feature-title">Liquid Glass UI</div>
                             </div>
                             <div class="feature-card">
-                                <div class="feature-icon">☁️</div>
                                 <div class="feature-title">iCloud Drive Sync</div>
                             </div>
                             <div class="feature-card">
-                                <div class="feature-icon">📤</div>
                                 <div class="feature-title">Multi-Format Export</div>
                             </div>
                         </div>
@@ -452,7 +449,6 @@
                             <!-- FAQ 1 -->
                             <details>
                                 <summary>
-                                    <span class="faq-icon">🚀</span>
                                     <span>How do I create my first CV?</span>
                                     <span class="chevron">▼</span>
                                 </summary>
@@ -471,7 +467,6 @@
                             <!-- FAQ 2 -->
                             <details>
                                 <summary>
-                                    <span class="faq-icon">🎯</span>
                                     <span>How does the AI tailoring feature work?</span>
                                     <span class="chevron">▼</span>
                                 </summary>
@@ -493,7 +488,6 @@
                             <!-- FAQ 3 -->
                             <details>
                                 <summary>
-                                    <span class="faq-icon">☁️</span>
                                     <span>My data isn't syncing between devices</span>
                                     <span class="chevron">▼</span>
                                 </summary>
@@ -515,7 +509,6 @@
                             <!-- FAQ 4 -->
                             <details>
                                 <summary>
-                                    <span class="faq-icon">📤</span>
                                     <span>How do I export my CV?</span>
                                     <span class="chevron">▼</span>
                                 </summary>
@@ -539,7 +532,6 @@
                             <!-- FAQ 5 -->
                             <details>
                                 <summary>
-                                    <span class="faq-icon">📋</span>
                                     <span>Can I create multiple versions of my CV?</span>
                                     <span class="chevron">▼</span>
                                 </summary>
@@ -562,7 +554,6 @@
 
                         <details>
                             <summary>
-                                <span class="faq-icon">⚠️</span>
                                 <span>App freezes or crashes</span>
                                 <span class="chevron">▼</span>
                             </summary>
@@ -606,7 +597,7 @@
                 <div class="footer-contact-section">
                     <div class="footer-contact-heading">Have a question?</div>
                     <p class="footer-contact-text">We're here to help. Reach out anytime.</p>
-                    <a href="mailto:jackyxhb@gmail.com" class="contact-email">📧 Contact Support</a>
+                    <a href="mailto:jackyxhb@gmail.com" class="contact-email">Contact Support</a>
                 </div>
 
                 <!-- Footer Links -->
