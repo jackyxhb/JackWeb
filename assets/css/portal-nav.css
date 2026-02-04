@@ -1,0 +1,151 @@
+/* ========================================
+   SHARED PORTAL NAVIGATION BAR
+   Used across all JackWeb pages
+   ======================================== */
+
+.portal-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-fixed);
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04),
+        0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="dark"] .portal-nav {
+    background: rgba(30, 41, 59, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+        0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.portal-nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-4) var(--space-6);
+}
+
+.portal-nav-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-size: var(--text-lg);
+    font-weight: var(--font-bold);
+    color: var(--color-navy);
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: var(--space-2) var(--space-3);
+    margin-left: calc(-1 * var(--space-3));
+    border-radius: var(--radius-lg);
+}
+
+.portal-nav-brand:hover {
+    color: var(--color-navy-dark);
+    background: rgba(30, 58, 138, 0.06);
+    transform: translateY(-1px);
+}
+
+[data-theme="dark"] .portal-nav-brand {
+    color: #f1f5f9;
+}
+
+[data-theme="dark"] .portal-nav-brand:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.portal-nav-spacer {
+    flex: 1;
+}
+
+.portal-nav-menu {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.portal-nav-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: var(--radius-lg);
+    transition: all 0.2s ease;
+}
+
+.portal-nav-link:hover {
+    color: var(--color-navy);
+    background: rgba(30, 58, 138, 0.06);
+}
+
+.portal-nav-link.active {
+    color: var(--color-navy);
+    background: rgba(30, 58, 138, 0.08);
+}
+
+[data-theme="dark"] .portal-nav-link {
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .portal-nav-link:hover {
+    color: #f1f5f9;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .portal-nav-link.active {
+    color: #f1f5f9;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.portal-nav-link-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: var(--radius-md);
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.portal-nav-link-icon.cvagent {
+    background-image: url('../images/cvagent-icon.png');
+}
+
+.portal-nav-link-icon.etpattern {
+    background-image: url('../images/etpattern-icon.png');
+}
+
+@media (max-width: 768px) {
+    .portal-nav-content {
+        padding: var(--space-3) var(--space-4);
+    }
+
+    .portal-nav-brand {
+        padding: var(--space-1) var(--space-2);
+        margin-left: calc(-1 * var(--space-2));
+    }
+
+    .portal-nav-menu {
+        gap: 0;
+    }
+
+    .portal-nav-link span:not(.portal-nav-link-icon) {
+        display: none;
+    }
+
+    .portal-nav-link {
+        padding: var(--space-2);
+    }
+}
