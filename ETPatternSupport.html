@@ -34,8 +34,7 @@
 
         /* Hero section */
         .hero-section {
-            padding: var(--space-16) 0 var(--space-20);
-            text-align: center;
+            padding: var(--space-12) 0;
             animation: fadeInDown 0.6s ease-out;
         }
 
@@ -43,8 +42,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: var(--space-4);
-            margin-bottom: var(--space-6);
+            gap: var(--space-6);
         }
 
         .hero-icon {
@@ -59,19 +57,29 @@
             box-shadow: var(--shadow-xl);
         }
 
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 0;
+        }
+
         .hero-content h1 {
             font-size: var(--text-4xl);
-            margin: 0 0 var(--space-2) 0;
+            margin: 0;
             background: linear-gradient(135deg, var(--accent-etpattern) 0%, var(--accent-etpattern-dark) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            text-align: left;
+            line-height: 1.2;
         }
 
-        .hero-content p {
+        .hero-content .subtitle {
             font-size: var(--text-lg);
             color: var(--text-secondary);
-            margin: 0;
+            text-align: left;
+            margin-top: var(--space-1);
         }
 
         /* Content sections */
@@ -325,7 +333,7 @@
                     <div class="hero-icon" aria-label="ETPattern icon"></div>
                     <div class="hero-content">
                         <h1>ETPattern Support</h1>
-                        <p>Master English through pattern recognition and spaced repetition</p>
+                        <span class="subtitle">Learn English with smart pattern matching</span>
                     </div>
                 </div>
             </section>
@@ -338,19 +346,15 @@
                         <h2 class="section-title">Key Features</h2>
                         <div class="features-grid">
                             <div class="feature-card">
-                                <div class="feature-icon">📚</div>
                                 <div class="feature-title">300+ Patterns</div>
                             </div>
                             <div class="feature-card">
-                                <div class="feature-icon">🔄</div>
                                 <div class="feature-title">FSRS Algorithm</div>
                             </div>
                             <div class="feature-card">
-                                <div class="feature-icon">🗣️</div>
                                 <div class="feature-title">Translation API</div>
                             </div>
                             <div class="feature-card">
-                                <div class="feature-icon">☁️</div>
                                 <div class="feature-title">CloudKit Sync</div>
                             </div>
                         </div>
@@ -553,13 +557,19 @@
                 <div
                     style="display: flex; gap: var(--space-6); justify-content: center; flex-wrap: wrap; margin-bottom: var(--space-4);">
                     <a href="index.html"
-                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">Portal</a>
-                    <a href="PrivacyPolicyforETPattern.html"
-                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">Privacy
-                        Policy</a>
+                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">Home</a>
                     <a href="CVAgentSupport.html"
                         style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">CVAgent
                         Support</a>
+                    <a href="ETPatternSupport.html"
+                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">ETPattern
+                        Support</a>
+                    <a href="PrivacyPolicyforCVAgent.html"
+                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">CVAgent
+                        Privacy</a>
+                    <a href="PrivacyPolicyforETPattern.html"
+                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">ETPattern
+                        Privacy</a>
                 </div>
 
                 <p style="text-align: center; margin: 0;">Made with ❤️ by Jack</p>

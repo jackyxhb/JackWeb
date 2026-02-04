@@ -159,10 +159,59 @@
             transform: translateX(0);
         }
 
-        /* Footer override */
+        /* Footer Contact Section */
+        .footer-contact-section {
+            text-align: center;
+            margin-bottom: var(--space-8);
+            padding-bottom: var(--space-8);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .footer-contact-heading {
+            font-size: var(--text-xl);
+            font-weight: var(--font-semibold);
+            color: var(--text-primary);
+            margin-bottom: var(--space-3);
+        }
+
+        .footer-contact-text {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            margin-bottom: var(--space-4);
+        }
+
+        .contact-email {
+            display: inline-block;
+            padding: var(--space-3) var(--space-6);
+            background: var(--color-navy);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: var(--radius-lg);
+            font-weight: var(--font-semibold);
+            transition: all var(--transition-base);
+        }
+
+        .contact-email:hover {
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Footer */
         footer {
             margin-top: auto;
-            padding-top: var(--space-12);
+            padding: var(--space-12) 0;
+            border-top: 1px solid var(--border-subtle);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: var(--text-sm);
+        }
+
+        footer a {
+            color: var(--text-secondary);
+            transition: color var(--transition-base);
+        }
+
+        footer a:hover {
+            color: var(--color-navy);
         }
 
         @media (max-width: 768px) {
@@ -259,7 +308,33 @@
 
             <!-- Footer -->
             <footer>
-                <p>Made with ❤️ by Jack · <a href="mailto:jackyxhb@gmail.com">Contact</a></p>
+                <!-- Contact Section -->
+                <div class="footer-contact-section">
+                    <div class="footer-contact-heading">Have a question?</div>
+                    <p class="footer-contact-text">We're here to help. Reach out anytime.</p>
+                    <a href="mailto:jackyxhb@gmail.com" class="contact-email">Contact Support</a>
+                </div>
+
+                <!-- Footer Links -->
+                <div
+                    style="display: flex; gap: var(--space-6); justify-content: center; flex-wrap: wrap; margin-bottom: var(--space-4);">
+                    <a href="index.html"
+                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">Home</a>
+                    <a href="CVAgentSupport.html"
+                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">CVAgent
+                        Support</a>
+                    <a href="ETPatternSupport.html"
+                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">ETPattern
+                        Support</a>
+                    <a href="PrivacyPolicyforCVAgent.html"
+                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">CVAgent
+                        Privacy</a>
+                    <a href="PrivacyPolicyforETPattern.html"
+                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">ETPattern
+                        Privacy</a>
+                </div>
+
+                <p style="text-align: center; margin: 0;">Made with ❤️ by Jack</p>
             </footer>
         </div>
     </div>
@@ -269,5 +344,3 @@
 </body>
 
 </html>
-</CodeContent>
-<parameter name="EmptyFile">false

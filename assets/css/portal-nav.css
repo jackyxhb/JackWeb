@@ -31,7 +31,7 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: var(--space-4) var(--space-6);
+    padding: var(--space-2) var(--space-6);
 }
 
 .portal-nav-brand {
