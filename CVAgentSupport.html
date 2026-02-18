@@ -24,276 +24,10 @@
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/portal-nav.css">
-
-    <!-- Support Page Styles -->
-    <style>
-        .wrapper {
-            position: relative;
-            padding-top: 70px;
-        }
-
-        /* Hero section */
-        .hero-section {
-            padding: var(--space-12) 0;
-            animation: fadeInDown 0.6s ease-out;
-        }
-
-        .app-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: var(--space-6);
-        }
-
-        .hero-icon {
-            width: 100px;
-            height: 100px;
-            background: url('assets/images/cvagent-icon.png') center/cover no-repeat;
-            border-radius: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3.5rem;
-            box-shadow: var(--shadow-xl);
-        }
-
-        .hero-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin-bottom: 0;
-        }
-
-        .hero-content h1 {
-            font-size: var(--text-4xl);
-            margin: 0;
-            color: var(--color-navy);
-            text-align: left;
-            line-height: 1.2;
-        }
-
-        .hero-content .subtitle {
-            font-size: var(--text-lg);
-            color: var(--text-secondary);
-            text-align: left;
-            margin-top: var(--space-1);
-        }
-
-        /* Content sections */
-        .content-wrapper {
-            margin-bottom: var(--space-16);
-        }
-
-        .main-content {
-            flex: 1;
-        }
-
-        .sidebar {
-            display: none;
-        }
-
-        /* Section styles - blog article format */
-        .section {
-            margin-bottom: 2.5rem;
-            padding: 0 0 2.5rem 0;
-            border-bottom: 1px solid var(--border-subtle);
-        }
-
-        .section:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .section-title {
-            font-size: var(--text-2xl);
-            font-weight: var(--font-bold);
-            margin-bottom: 1rem;
-            padding: 0;
-            border: none;
-            color: var(--text-primary);
-        }
-
-        /* Feature cards */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: var(--space-4);
-            margin-bottom: var(--space-8);
-        }
-
-        .feature-card {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: var(--radius-lg);
-            padding: var(--space-4);
-            text-align: center;
-            transition: all var(--transition-base);
-        }
-
-        .feature-card:hover {
-            background: var(--bg-overlay-medium);
-            border-color: var(--border-medium);
-        }
-
-        .feature-icon {
-            font-size: 2rem;
-            margin-bottom: var(--space-2);
-        }
-
-        .feature-title {
-            font-size: var(--text-sm);
-            font-weight: var(--font-semibold);
-            color: var(--text-primary);
-        }
-
-        /* FAQ styling */
-        .faq-items {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-4);
-        }
-
-        details {
-            animation: fadeInUp 0.5s ease-out backwards;
-        }
-
-        details:nth-child(1) {
-            animation-delay: 0.05s;
-        }
-
-        details:nth-child(2) {
-            animation-delay: 0.1s;
-        }
-
-        details:nth-child(3) {
-            animation-delay: 0.15s;
-        }
-
-        details:nth-child(4) {
-            animation-delay: 0.2s;
-        }
-
-        details:nth-child(5) {
-            animation-delay: 0.25s;
-        }
-
-        /* Requirements box - now inline before FAQ */
-        .requirements-box {
-            background: var(--glass-bg);
-            border-left: 4px solid var(--accent-cvagent);
-            border-radius: var(--radius-lg);
-            padding: var(--space-6);
-            margin-bottom: var(--space-8);
-        }
-
-        .requirements-title {
-            font-size: var(--text-base);
-            font-weight: var(--font-semibold);
-            color: var(--accent-cvagent);
-            margin-bottom: var(--space-3);
-        }
-
-        .requirements-list {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .requirements-list li {
-            padding: var(--space-2) 0;
-            color: var(--text-secondary);
-            font-size: var(--text-sm);
-        }
-
-        .requirements-list li::before {
-            content: '✓ ';
-            color: var(--accent-cvagent);
-            font-weight: var(--font-bold);
-            margin-right: var(--space-2);
-        }
-
-        /* Footer Contact Section */
-        .footer-contact-section {
-            text-align: center;
-            margin-bottom: var(--space-8);
-            padding-bottom: var(--space-8);
-            border-bottom: 1px solid var(--border-subtle);
-        }
-
-        .footer-contact-heading {
-            font-size: var(--text-xl);
-            font-weight: var(--font-semibold);
-            color: var(--text-primary);
-            margin-bottom: var(--space-3);
-        }
-
-        .footer-contact-text {
-            font-size: var(--text-sm);
-            color: var(--text-secondary);
-            margin-bottom: var(--space-4);
-        }
-
-        .contact-email {
-            display: inline-block;
-            padding: var(--space-3) var(--space-6);
-            background: var(--color-navy);
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: var(--radius-lg);
-            font-weight: var(--font-semibold);
-            transition: all var(--transition-base);
-        }
-
-        .contact-email:hover {
-            box-shadow: var(--shadow-lg);
-        }
-
-        /* Footer */
-        footer {
-            padding: var(--space-12) 0;
-            border-top: 1px solid var(--border-subtle);
-            text-align: center;
-            color: var(--text-muted);
-            font-size: var(--text-sm);
-        }
-
-        footer a {
-            color: var(--text-secondary);
-            transition: color var(--transition-base);
-        }
-
-        footer a:hover {
-            color: var(--accent-cvagent);
-        }
-
-        @media (max-width: 768px) {
-            .hero-section {
-                padding: var(--space-12) 0 var(--space-16);
-            }
-
-            .app-header {
-                flex-direction: column;
-            }
-
-            .hero-icon {
-                width: 80px;
-                height: 80px;
-                font-size: 2.5rem;
-            }
-
-            .hero-content h1 {
-                font-size: var(--text-3xl);
-            }
-
-            .section-title {
-                font-size: var(--text-xl);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/support-page.css">
 </head>
 
-<body>
+<body class="cvagent">
     <div class="wrapper">
         <!-- Navigation Bar -->
         <nav class="portal-nav">
@@ -372,12 +106,14 @@
 
                         <div class="faq-items">
                             <!-- FAQ 1 -->
-                            <details>
-                                <summary>
-                                    <span>How do I create my first CV?</span>
-                                    <span class="chevron">▼</span>
-                                </summary>
-                                <div class="faq-content">
+                            <div class="faq-item">
+                                <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="cv-faq-1">
+                                    <span class="summary-content">
+                                        <span>How do I create my first CV?</span>
+                                        <span class="chevron" aria-hidden="true">▼</span>
+                                    </span>
+                                </button>
+                                <div class="faq-content" id="cv-faq-1" hidden>
                                     <p>Getting started with CVAgent is simple:</p>
                                     <ol>
                                         <li>Open the app and tap <strong>Create New CV</strong>.</li>
@@ -387,15 +123,17 @@
                                         <li>Export your CV as PDF or share directly.</li>
                                     </ol>
                                 </div>
-                            </details>
+                            </div>
 
                             <!-- FAQ 2 -->
-                            <details>
-                                <summary>
-                                    <span>How does the AI tailoring feature work?</span>
-                                    <span class="chevron">▼</span>
-                                </summary>
-                                <div class="faq-content">
+                            <div class="faq-item">
+                                <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="cv-faq-2">
+                                    <span class="summary-content">
+                                        <span>How does the AI tailoring feature work?</span>
+                                        <span class="chevron" aria-hidden="true">▼</span>
+                                    </span>
+                                </button>
+                                <div class="faq-content" id="cv-faq-2" hidden>
                                     <p>CVAgent uses advanced AI to customize your CV for specific job applications:</p>
                                     <ul>
                                         <li><strong>Paste a Job Description</strong>: Copy the job posting you're
@@ -408,15 +146,17 @@
                                             tailored version.</li>
                                     </ul>
                                 </div>
-                            </details>
+                            </div>
 
                             <!-- FAQ 3 -->
-                            <details>
-                                <summary>
-                                    <span>My data isn't syncing between devices</span>
-                                    <span class="chevron">▼</span>
-                                </summary>
-                                <div class="faq-content">
+                            <div class="faq-item">
+                                <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="cv-faq-3">
+                                    <span class="summary-content">
+                                        <span>My data isn't syncing between devices</span>
+                                        <span class="chevron" aria-hidden="true">▼</span>
+                                    </span>
+                                </button>
+                                <div class="faq-content" id="cv-faq-3" hidden>
                                     <p>CVAgent uses <strong>iCloud</strong> to keep your data in sync. If you're
                                         experiencing issues:</p>
                                     <ul>
@@ -429,15 +169,17 @@
                                         <li><strong>Wait for Sync</strong>: Initial sync may take a few moments.</li>
                                     </ul>
                                 </div>
-                            </details>
+                            </div>
 
                             <!-- FAQ 4 -->
-                            <details>
-                                <summary>
-                                    <span>How do I export my CV?</span>
-                                    <span class="chevron">▼</span>
-                                </summary>
-                                <div class="faq-content">
+                            <div class="faq-item">
+                                <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="cv-faq-4">
+                                    <span class="summary-content">
+                                        <span>How do I export my CV?</span>
+                                        <span class="chevron" aria-hidden="true">▼</span>
+                                    </span>
+                                </button>
+                                <div class="faq-content" id="cv-faq-4" hidden>
                                     <p>CVAgent offers multiple export options:</p>
                                     <ul>
                                         <li><strong>PDF Export</strong>: Tap the share icon and select "Export as PDF"
@@ -452,15 +194,17 @@
                                             app.</li>
                                     </ul>
                                 </div>
-                            </details>
+                            </div>
 
                             <!-- FAQ 5 -->
-                            <details>
-                                <summary>
-                                    <span>Can I create multiple versions of my CV?</span>
-                                    <span class="chevron">▼</span>
-                                </summary>
-                                <div class="faq-content">
+                            <div class="faq-item">
+                                <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="cv-faq-5">
+                                    <span class="summary-content">
+                                        <span>Can I create multiple versions of my CV?</span>
+                                        <span class="chevron" aria-hidden="true">▼</span>
+                                    </span>
+                                </button>
+                                <div class="faq-content" id="cv-faq-5" hidden>
                                     <p>Yes! CVAgent supports creating multiple CV versions:</p>
                                     <ul>
                                         <li>Each tailored version is saved separately in your private storage.</li>
@@ -469,7 +213,7 @@
                                         <li>Keep track of which version you sent to which company.</li>
                                     </ul>
                                 </div>
-                            </details>
+                            </div>
                         </div>
                     </section>
 
@@ -477,12 +221,14 @@
                     <section class="section">
                         <h2 class="section-title">Troubleshooting</h2>
 
-                        <details>
-                            <summary>
-                                <span>App freezes or crashes</span>
-                                <span class="chevron">▼</span>
-                            </summary>
-                            <div class="faq-content">
+                        <div class="faq-item">
+                            <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="cv-troubleshoot-1">
+                                <span class="summary-content">
+                                    <span>App freezes or crashes</span>
+                                    <span class="chevron" aria-hidden="true">▼</span>
+                                </span>
+                            </button>
+                            <div class="faq-content" id="cv-troubleshoot-1" hidden>
                                 <ol>
                                     <li><strong>Force Quit</strong>: Swipe up from the bottom of the screen and pause in
                                         the middle, then swipe up on the CVAgent app preview to close it.</li>
@@ -493,7 +239,7 @@
                                     </li>
                                 </ol>
                             </div>
-                        </details>
+                        </div>
                     </section>
 
                     <!-- Privacy Section -->
@@ -527,31 +273,22 @@
                 </div>
 
                 <!-- Footer Links -->
-                <div
-                    style="display: flex; gap: var(--space-6); justify-content: center; flex-wrap: wrap; margin-bottom: var(--space-4);">
-                    <a href="index.html"
-                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">Home</a>
-                    <a href="CVAgentSupport.html"
-                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">CVAgent
-                        Support</a>
-                    <a href="ETPatternSupport.html"
-                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">ETPattern
-                        Support</a>
-                    <a href="PrivacyPolicyforCVAgent.html"
-                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">CVAgent
-                        Privacy</a>
-                    <a href="PrivacyPolicyforETPattern.html"
-                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">ETPattern
-                        Privacy</a>
+                <div class="footer-nav-links">
+                    <a href="index.html" class="footer-nav-link">Home</a>
+                    <a href="CVAgentSupport.html" class="footer-nav-link">CVAgent Support</a>
+                    <a href="ETPatternSupport.html" class="footer-nav-link">ETPattern Support</a>
+                    <a href="PrivacyPolicyforCVAgent.html" class="footer-nav-link">CVAgent Privacy</a>
+                    <a href="PrivacyPolicyforETPattern.html" class="footer-nav-link">ETPattern Privacy</a>
                 </div>
 
-                <p style="text-align: center; margin: 0;">Made with ❤️ by Jack</p>
+                <p class="footer-credit">Made with ❤️ by Jack</p>
             </footer>
         </div>
     </div>
 
     <!-- Theme Toggle Script -->
     <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/faq-toggle.js"></script>
 </body>
 
 </html>

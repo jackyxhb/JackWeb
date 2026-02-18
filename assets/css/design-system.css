@@ -30,11 +30,11 @@
   --color-teal-dark: #0891b2;
   --color-teal-light: #22d3ee;
 
-  /* Accent Colors (Legacy - mapped to brand colors) */
-  --accent-cvagent: #002783;
-  --accent-cvagent-dark: #001a5f;
-  --accent-etpattern: #06b6d4;
-  --accent-etpattern-dark: #0891b2;
+  /* Accent Colors */
+  --accent-cvagent: #667eea;
+  --accent-cvagent-dark: #764ba2;
+  --accent-etpattern: #f093fb;
+  --accent-etpattern-dark: #f5576c;
   --accent-teal: #78cdd1;
   --accent-coral: #ff6b6b;
   --accent-success: #51cf66;

@@ -24,291 +24,10 @@
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/portal-nav.css">
-
-    <!-- Privacy Policy Styles -->
-    <style>
-        .wrapper {
-            position: relative;
-            padding-top: 70px;
-        }
-
-        /* Hero section */
-        .hero-section {
-            padding: var(--space-16) 0 var(--space-20);
-            text-align: center;
-            animation: fadeInDown 0.6s ease-out;
-        }
-
-        .hero-title {
-            font-size: var(--text-4xl);
-            font-weight: var(--font-bold);
-            margin-bottom: var(--space-4);
-            background: linear-gradient(135deg, var(--accent-cvagent) 0%, var(--accent-cvagent-dark) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* Content sections */
-        .content-wrapper {
-            margin-bottom: var(--space-16);
-        }
-
-        .main-content {
-            flex: 1;
-        }
-
-        .sidebar {
-            display: none;
-        }
-
-        /* Section styles - blog article format */
-        .section {
-            margin-bottom: 2.5rem;
-            padding: 0 0 2.5rem 0;
-            border-bottom: 1px solid var(--border-subtle);
-        }
-
-        .section:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .section-number {
-            display: inline-block;
-            width: 32px;
-            height: 32px;
-            background: linear-gradient(135deg, var(--accent-cvagent) 0%, var(--accent-cvagent-dark) 100%);
-            color: #ffffff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: var(--font-bold);
-            margin-right: var(--space-3);
-            font-size: var(--text-sm);
-        }
-
-        .section-title {
-            display: flex;
-            align-items: center;
-            font-size: var(--text-2xl);
-            font-weight: var(--font-bold);
-            margin-bottom: 1rem;
-            padding: 0;
-            border: none;
-            color: var(--text-primary);
-        }
-
-        .section-title .section-number {
-            margin-right: var(--space-4);
-        }
-
-        /* Highlight boxes */
-        .highlight-box {
-            background: var(--bg-secondary);
-            border-left: 4px solid var(--accent-cvagent);
-            border-radius: var(--radius-lg);
-            padding: var(--space-6);
-            margin: var(--space-6) 0;
-            backdrop-filter: blur(var(--glass-blur));
-        }
-
-        .highlight-title {
-            font-size: var(--text-lg);
-            font-weight: var(--font-bold);
-            color: var(--accent-cvagent);
-            margin-bottom: var(--space-2);
-        }
-
-        .highlight-box p {
-            margin: 0;
-            color: var(--text-secondary);
-        }
-
-        /* Feature list */
-        .feature-list {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-3);
-            margin: var(--space-4) 0;
-        }
-
-        .feature-item {
-            display: flex;
-            gap: var(--space-3);
-            align-items: flex-start;
-            padding: var(--space-3);
-            background: var(--glass-bg);
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--glass-border);
-            transition: all var(--transition-base);
-        }
-
-        .feature-item:hover {
-            border-color: var(--border-medium);
-            background: var(--bg-overlay-light);
-        }
-
-        .feature-icon {
-            flex-shrink: 0;
-            font-size: 1.5rem;
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .feature-content {
-            flex: 1;
-        }
-
-        .feature-title {
-            font-weight: var(--font-semibold);
-            color: var(--text-primary);
-            margin-bottom: var(--space-1);
-        }
-
-        .feature-description {
-            font-size: var(--text-sm);
-            color: var(--text-secondary);
-            margin: 0;
-        }
-
-        /* Table of Contents */
-        .toc-box {
-            background: var(--glass-bg);
-            backdrop-filter: blur(var(--glass-blur));
-            border: 1px solid var(--glass-border);
-            border-radius: var(--radius-lg);
-            padding: var(--space-6);
-        }
-
-        .toc-title {
-            font-size: var(--text-base);
-            font-weight: var(--font-semibold);
-            color: var(--text-primary);
-            margin-bottom: var(--space-4);
-        }
-
-        .toc-list {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .toc-list li {
-            margin-bottom: var(--space-2);
-        }
-
-        .toc-list a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: var(--text-sm);
-            transition: all var(--transition-base);
-            display: block;
-            padding: var(--space-2) 0;
-            border-radius: var(--radius-sm);
-        }
-
-        .toc-list a:hover {
-            color: var(--accent-cvagent);
-            padding-left: var(--space-2);
-        }
-
-        /* Contact box */
-        .contact-box {
-            background: var(--glass-bg);
-            backdrop-filter: blur(var(--glass-blur));
-            border: 1px solid var(--glass-border);
-            border-radius: var(--radius-lg);
-            padding: var(--space-6);
-            text-align: center;
-        }
-
-        .contact-title {
-            font-size: var(--text-base);
-            font-weight: var(--font-semibold);
-            color: var(--text-primary);
-            margin-bottom: var(--space-2);
-        }
-
-        .contact-email {
-            display: inline-block;
-            padding: var(--space-3) var(--space-6);
-            background: linear-gradient(135deg, var(--accent-cvagent) 0%, var(--accent-cvagent-dark) 100%);
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: var(--radius-lg);
-            font-weight: var(--font-semibold);
-            transition: all var(--transition-base);
-            font-size: var(--text-sm);
-        }
-
-        .contact-email:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        /* Footer Contact Section */
-        .footer-contact-section {
-            text-align: center;
-            margin-bottom: var(--space-8);
-            padding-bottom: var(--space-8);
-            border-bottom: 1px solid var(--border-subtle);
-        }
-
-        .footer-contact-heading {
-            font-size: var(--text-xl);
-            font-weight: var(--font-semibold);
-            color: var(--text-primary);
-            margin-bottom: var(--space-3);
-        }
-
-        .footer-contact-text {
-            font-size: var(--text-sm);
-            color: var(--text-secondary);
-            margin-bottom: var(--space-4);
-        }
-
-        /* Footer */
-        footer {
-            padding: var(--space-12) 0;
-            border-top: 1px solid var(--border-subtle);
-            text-align: center;
-            color: var(--text-muted);
-            font-size: var(--text-sm);
-        }
-
-        footer a {
-            color: var(--text-secondary);
-            transition: color var(--transition-base);
-        }
-
-        footer a:hover {
-            color: var(--accent-cvagent);
-        }
-
-        @media (max-width: 768px) {
-            .hero-section {
-                padding: var(--space-12) 0 var(--space-16);
-            }
-
-            .hero-title {
-                font-size: var(--text-3xl);
-            }
-
-            .section-title {
-                font-size: var(--text-xl);
-                flex-wrap: wrap;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/privacy-page.css">
 </head>
 
-<body>
+<body class="cvagent">
     <div class="wrapper">
         <!-- Navigation Bar -->
         <nav class="portal-nav">
@@ -532,7 +251,7 @@
                             </div>
                         </div>
 
-                        <p style="margin-top: var(--space-6); font-size: var(--text-sm); color: var(--text-secondary);">
+                        <p class="privacy-note">
                             <strong>Note:</strong> Refer to each AI provider's privacy policy for their specific data
                             handling practices.
                         </p>
@@ -593,8 +312,8 @@
                         </h2>
                         <p>If you have questions about this Privacy Policy or CVAgent's privacy practices, please
                             contact us:</p>
-                        <div style="margin-top: var(--space-6);">
-                            <a href="mailto:jackyxhb@gmail.com" class="contact-email">📧 jackyxhb@gmail.com</a>
+                        <div class="contact-button-wrapper">
+                            <a href="mailto:jackyxhb@gmail.com" class="contact-email">Contact Support</a>
                         </div>
                     </section>
                 </div>
@@ -606,29 +325,19 @@
                 <div class="footer-contact-section">
                     <div class="footer-contact-heading">Have Questions?</div>
                     <p class="footer-contact-text">We're happy to explain our privacy practices.</p>
-                    <a href="mailto:jackyxhb@gmail.com" class="contact-email">📧 Email Us</a>
+                    <a href="mailto:jackyxhb@gmail.com" class="contact-email">Contact Support</a>
                 </div>
 
                 <!-- Footer Links -->
-                <div
-                    style="display: flex; gap: var(--space-6); justify-content: center; flex-wrap: wrap; margin-bottom: var(--space-4);">
-                    <a href="index.html"
-                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">Home</a>
-                    <a href="CVAgentSupport.html"
-                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">CVAgent
-                        Support</a>
-                    <a href="ETPatternSupport.html"
-                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">ETPattern
-                        Support</a>
-                    <a href="PrivacyPolicyforCVAgent.html"
-                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">CVAgent
-                        Privacy</a>
-                    <a href="PrivacyPolicyforETPattern.html"
-                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">ETPattern
-                        Privacy</a>
+                <div class="footer-nav-links">
+                    <a href="index.html" class="footer-nav-link">Home</a>
+                    <a href="CVAgentSupport.html" class="footer-nav-link">CVAgent Support</a>
+                    <a href="ETPatternSupport.html" class="footer-nav-link">ETPattern Support</a>
+                    <a href="PrivacyPolicyforCVAgent.html" class="footer-nav-link">CVAgent Privacy</a>
+                    <a href="PrivacyPolicyforETPattern.html" class="footer-nav-link">ETPattern Privacy</a>
                 </div>
 
-                <p style="text-align: center; margin: 0;">Made with ❤️ by Jack</p>
+                <p class="footer-credit">Made with ❤️ by Jack</p>
             </footer>
         </div>
     </div>

@@ -28,204 +28,8 @@
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/portal-nav.css">
+    <link rel="stylesheet" href="assets/css/portal-index.css">
 
-    <!-- Portal-specific styles -->
-    <style>
-        .wrapper {
-            position: relative;
-            padding-top: 70px;
-        }
-
-        /* Hero override */
-        .hero {
-            padding-top: 40px;
-            padding-bottom: var(--space-20);
-            animation: page-enter 0.4s ease-out;
-        }
-
-        .hero-title {
-            color: var(--color-navy);
-        }
-
-        [data-theme="dark"] .hero-title {
-            color: #93c5fd;
-        }
-
-        /* Apps grid */
-        .apps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: var(--space-8);
-            margin-bottom: var(--space-16);
-        }
-
-        .app-card {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-6);
-        }
-
-        .app-card-header {
-            display: flex;
-            align-items: center;
-            gap: var(--space-4);
-        }
-
-        .app-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            box-shadow: var(--shadow-md);
-            flex-shrink: 0;
-        }
-
-        .cvagent .app-icon {
-            background: url('assets/images/cvagent-icon.png') center/cover no-repeat;
-        }
-
-        .etpattern .app-icon {
-            background: url('assets/images/etpattern-icon.png') center/cover no-repeat;
-        }
-
-        .app-title {
-            font-size: var(--text-2xl);
-            font-weight: var(--font-bold);
-            margin: 0;
-            color: var(--color-navy);
-        }
-
-        [data-theme="dark"] .app-title {
-            color: #f1f5f9;
-        }
-
-        .app-card.glass-card {
-            animation: fade-in-up 0.4s ease-out;
-        }
-
-        .app-card:nth-child(1) {
-            animation: fade-in-up 0.4s ease-out;
-        }
-
-        .app-card:nth-child(2) {
-            animation: fade-in-up 0.4s ease-out 0.1s backwards;
-        }
-
-        .app-card .description {
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin: 0;
-        }
-
-        .card-links {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-3);
-            margin-top: auto;
-        }
-
-        .card-link {
-            display: flex;
-            align-items: center;
-            gap: var(--space-2);
-            padding: var(--space-3) var(--space-4);
-            background: transparent;
-            border: 2px solid var(--color-navy);
-            border-radius: var(--radius-lg);
-            color: var(--color-navy);
-            text-decoration: none;
-            font-weight: var(--font-semibold);
-            transition: all var(--transition-base);
-        }
-
-        .card-link:hover {
-            background: var(--color-navy);
-            color: #ffffff;
-            transform: translateX(4px);
-        }
-
-        .card-link .arrow {
-            margin-left: auto;
-            opacity: 0;
-            transform: translateX(-4px);
-            transition: all var(--transition-base);
-        }
-
-        .card-link:hover .arrow {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        /* Footer Contact Section */
-        .footer-contact-section {
-            text-align: center;
-            margin-bottom: var(--space-8);
-            padding-bottom: var(--space-8);
-            border-bottom: 1px solid var(--border-subtle);
-        }
-
-        .footer-contact-heading {
-            font-size: var(--text-xl);
-            font-weight: var(--font-semibold);
-            color: var(--text-primary);
-            margin-bottom: var(--space-3);
-        }
-
-        .footer-contact-text {
-            font-size: var(--text-sm);
-            color: var(--text-secondary);
-            margin-bottom: var(--space-4);
-        }
-
-        .contact-email {
-            display: inline-block;
-            padding: var(--space-3) var(--space-6);
-            background: var(--color-navy);
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: var(--radius-lg);
-            font-weight: var(--font-semibold);
-            transition: all var(--transition-base);
-        }
-
-        .contact-email:hover {
-            box-shadow: var(--shadow-lg);
-        }
-
-        /* Footer */
-        footer {
-            margin-top: auto;
-            padding: var(--space-12) 0;
-            border-top: 1px solid var(--border-subtle);
-            text-align: center;
-            color: var(--text-muted);
-            font-size: var(--text-sm);
-        }
-
-        footer a {
-            color: var(--text-secondary);
-            transition: color var(--transition-base);
-        }
-
-        footer a:hover {
-            color: var(--color-navy);
-        }
-
-        @media (max-width: 768px) {
-            .apps-grid {
-                gap: var(--space-6);
-            }
-
-            .app-icon {
-                width: 64px;
-                height: 64px;
-                font-size: 2rem;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -316,25 +120,15 @@
                 </div>
 
                 <!-- Footer Links -->
-                <div
-                    style="display: flex; gap: var(--space-6); justify-content: center; flex-wrap: wrap; margin-bottom: var(--space-4);">
-                    <a href="index.html"
-                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">Home</a>
-                    <a href="CVAgentSupport.html"
-                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">CVAgent
-                        Support</a>
-                    <a href="ETPatternSupport.html"
-                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">ETPattern
-                        Support</a>
-                    <a href="PrivacyPolicyforCVAgent.html"
-                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">CVAgent
-                        Privacy</a>
-                    <a href="PrivacyPolicyforETPattern.html"
-                        style="color: var(--text-secondary); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition-base);">ETPattern
-                        Privacy</a>
+                <div class="footer-nav-links">
+                    <a href="index.html" class="footer-nav-link">Home</a>
+                    <a href="CVAgentSupport.html" class="footer-nav-link">CVAgent Support</a>
+                    <a href="ETPatternSupport.html" class="footer-nav-link">ETPattern Support</a>
+                    <a href="PrivacyPolicyforCVAgent.html" class="footer-nav-link">CVAgent Privacy</a>
+                    <a href="PrivacyPolicyforETPattern.html" class="footer-nav-link">ETPattern Privacy</a>
                 </div>
 
-                <p style="text-align: center; margin: 0;">Made with ❤️ by Jack</p>
+                <p class="footer-credit">Made with ❤️ by Jack</p>
             </footer>
         </div>
     </div>
