@@ -1,7 +1,6 @@
 /* ========================================
-   SHARED PORTAL NAVIGATION BAR
-   Used across all JackWeb pages
-   ======================================== */
+     SHARED PORTAL NAVIGATION BAR
+     ======================================== */
 
 .portal-nav {
     position: fixed;
@@ -9,58 +8,45 @@
     left: 0;
     right: 0;
     z-index: var(--z-fixed);
-    background: rgba(255, 255, 255, 0.72);
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04),
-        0 4px 12px rgba(0, 0, 0, 0.03);
+    background: color-mix(in srgb, var(--bg-panel-strong) 82%, transparent);
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    border-bottom: 1px solid var(--line-subtle);
+    box-shadow: 0 2px 16px rgba(12, 28, 49, 0.08);
 }
 
-[data-theme="dark"] .portal-nav {
-    background: rgba(30, 41, 59, 0.8);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
-        0 4px 12px rgba(0, 0, 0, 0.08);
+[data-theme='dark'] .portal-nav {
+    background: color-mix(in srgb, var(--bg-panel-strong) 88%, transparent);
 }
 
 .portal-nav-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
-    max-width: 1200px;
+    max-width: var(--container-max);
     margin: 0 auto;
     padding: var(--space-2) var(--space-6);
+    gap: var(--space-3);
 }
 
 .portal-nav-brand {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: var(--space-3);
-    font-size: var(--text-lg);
-    font-weight: var(--font-bold);
-    color: var(--color-navy);
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: var(--text-primary);
     text-decoration: none;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     padding: var(--space-2) var(--space-3);
     margin-left: calc(-1 * var(--space-3));
     border-radius: var(--radius-lg);
+    transition: background-color var(--transition-base), transform var(--transition-fast);
 }
 
 .portal-nav-brand:hover {
-    color: var(--color-navy-dark);
-    background: rgba(30, 58, 138, 0.06);
+    background: var(--bg-overlay-light);
     transform: translateY(-1px);
-}
-
-[data-theme="dark"] .portal-nav-brand {
-    color: #f1f5f9;
-}
-
-[data-theme="dark"] .portal-nav-brand:hover {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.08);
 }
 
 .portal-nav-spacer {
@@ -68,84 +54,65 @@
 }
 
 .portal-nav-menu {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: var(--space-1);
+    gap: 0.2rem;
 }
 
 .portal-nav-link {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: var(--space-2);
-    padding: var(--space-2) var(--space-4);
+    padding: 0.45rem 0.8rem;
     font-size: var(--text-sm);
-    font-weight: var(--font-semibold);
+    font-weight: 600;
     color: var(--text-secondary);
+    border-radius: 0.8rem;
     text-decoration: none;
-    border-radius: var(--radius-lg);
-    transition: all 0.2s ease;
+    transition: background-color var(--transition-base), color var(--transition-base);
 }
 
-.portal-nav-link:hover {
-    color: var(--color-navy);
-    background: rgba(30, 58, 138, 0.06);
-}
-
+.portal-nav-link:hover,
 .portal-nav-link.active {
-    color: var(--color-navy);
-    background: rgba(30, 58, 138, 0.08);
-}
-
-[data-theme="dark"] .portal-nav-link {
-    color: #94a3b8;
-}
-
-[data-theme="dark"] .portal-nav-link:hover {
-    color: #f1f5f9;
-    background: rgba(255, 255, 255, 0.08);
-}
-
-[data-theme="dark"] .portal-nav-link.active {
-    color: #f1f5f9;
-    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    background: var(--bg-overlay-light);
 }
 
 .portal-nav-link-icon {
-    width: 20px;
-    height: 20px;
-    border-radius: var(--radius-md);
+    width: 18px;
+    height: 18px;
+    border-radius: 0.45rem;
     background-size: cover;
     background-position: center;
     flex-shrink: 0;
 }
 
 .portal-nav-link-icon.cvagent {
-    background-image: url('../images/cvagent-icon.png');
+    background-image: url('../images/cvagent-icon.svg');
 }
 
 .portal-nav-link-icon.etpattern {
-    background-image: url('../images/etpattern-icon.png');
+    background-image: url('../images/etpattern-icon.svg');
 }
 
 @media (max-width: 768px) {
     .portal-nav-content {
-        padding: var(--space-3) var(--space-4);
+        padding: var(--space-2) var(--space-4);
     }
 
-    .portal-nav-brand {
-        padding: var(--space-1) var(--space-2);
-        margin-left: calc(-1 * var(--space-2));
-    }
-
-    .portal-nav-menu {
-        gap: 0;
+    .portal-nav-link {
+        padding: 0.5rem;
     }
 
     .portal-nav-link span:not(.portal-nav-link-icon) {
         display: none;
     }
+}
 
+@media (prefers-reduced-motion: reduce) {
+    .portal-nav-brand,
     .portal-nav-link {
-        padding: var(--space-2);
+        transform: none !important;
+        transition: none !important;
     }
 }

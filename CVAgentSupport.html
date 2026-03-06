@@ -4,22 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="CVAgent Support - Get help with CVAgent, our AI-powered CV and cover letter generation tool. FAQs, troubleshooting, and support resources.">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="CVAgent Support - answers, troubleshooting, and privacy guidance.">
+    <meta name="theme-color" content="#f4f7fb">
     <title>CVAgent Support & FAQ</title>
-
-    <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
-    <link rel="icon" type="image/png" href="assets/images/cvagent-icon.png?v=2">
-    <link rel="apple-touch-icon" href="assets/images/cvagent-icon.png?v=2">
-
-    <!-- Font Loading -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=3">
+    <link rel="icon" type="image/svg+xml" href="assets/images/cvagent-icon.svg?v=4">
+    <link rel="apple-touch-icon" href="assets/images/cvagent-icon.svg?v=4">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/design-system.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/animations.css">
@@ -27,266 +20,73 @@
     <link rel="stylesheet" href="assets/css/support-page.css">
 </head>
 
-<body class="cvagent">
+<body class="cvagent page-support">
     <div class="wrapper">
-        <!-- Navigation Bar -->
-        <nav class="portal-nav">
+        <nav class="portal-nav" aria-label="Primary">
             <div class="portal-nav-content">
-                <a href="index.html" class="portal-nav-brand">
-                    <span>Home</span>
-                </a>
+                <a href="index.html" class="portal-nav-brand">Portal Home</a>
                 <div class="portal-nav-spacer"></div>
-                <nav class="portal-nav-menu">
-                    <a href="CVAgentSupport.html" class="portal-nav-link active">
-                        <span class="portal-nav-link-icon cvagent"></span>
-                        <span>CVAgent</span>
-                    </a>
-                    <a href="ETPatternSupport.html" class="portal-nav-link">
-                        <span class="portal-nav-link-icon etpattern"></span>
-                        <span>ETPattern</span>
-                    </a>
-                </nav>
-                <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle theme">
-                    <span class="icon-sun">☀️</span>
-                    <span class="icon-moon">🌙</span>
-                </button>
+                <div class="portal-nav-menu">
+                    <a href="CVAgentSupport.html" class="portal-nav-link active"><span class="portal-nav-link-icon cvagent"></span><span>CVAgent</span></a>
+                    <a href="ETPatternSupport.html" class="portal-nav-link"><span class="portal-nav-link-icon etpattern"></span><span>ETPattern</span></a>
+                </div>
+                <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle theme"><span class="icon-sun">☀️</span><span class="icon-moon">🌙</span></button>
             </div>
         </nav>
 
         <div class="container">
-            <!-- Hero Section -->
-            <section class="hero-section">
-                <div class="app-header">
-                    <div class="hero-icon" aria-label="CVAgent icon"></div>
-                    <div class="hero-content">
-                        <h1>CVAgent Support</h1>
-                        <span class="subtitle">Your AI-powered CV and cover letter assistant</span>
+            <main class="main-shell support-main">
+                <header class="panel hero-panel support-hero">
+                    <span class="eyebrow">Support Center</span>
+                    <div class="app-header">
+                        <div class="app-icon" aria-label="CVAgent icon"></div>
+                        <div class="stack-sm">
+                            <h1 class="hero-title"><span class="gradient-text">CVAgent Support</span></h1>
+                            <p class="hero-subtitle">Write role-ready CVs and cover letters with controlled AI assistance, private storage, and export precision.</p>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </header>
 
-            <!-- Main Content -->
-            <main class="reading-column content-wrapper">
-                <div class="main-content">
-                    <!-- Features Section -->
-                    <section class="section">
-                        <h2 class="section-title">Key Features</h2>
-                        <div class="features-grid">
-                            <div class="feature-card">
-                                <div class="feature-title">Multi-Provider AI</div>
-                            </div>
-                            <div class="feature-card">
-                                <div class="feature-title">Liquid Glass UI</div>
-                            </div>
-                            <div class="feature-card">
-                                <div class="feature-title">iCloud Drive Sync</div>
-                            </div>
-                            <div class="feature-card">
-                                <div class="feature-title">Multi-Format Export</div>
-                            </div>
-                        </div>
-                    </section>
+                <section class="section-block">
+                    <span class="kicker">Capabilities</span>
+                    <h2 class="section-title">Core Capabilities</h2>
+                    <div class="features-grid"><div class="feature-tile">Multi-provider AI</div><div class="feature-tile">Liquid Glass UI</div><div class="feature-tile">iCloud Drive sync</div><div class="feature-tile">Multi-format export</div></div>
+                </section>
 
-                    <!-- Requirements Box (moved from sidebar) -->
-                    <section class="section">
-                        <div class="callout accent-cvagent">
-                            <div class="callout-title requirements-title">Requirements</div>
-                            <ul class="requirements-list">
-                                <li>iOS 16.2 or later</li>
-                                <li>iCloud account</li>
-                                <li>Internet connection</li>
-                                <li>50 MB free space</li>
-                            </ul>
-                        </div>
-                    </section>
+                <section class="section-block callout">
+                    <span class="kicker">System Requirements</span>
+                    <h2 class="section-title">Before You Start</h2>
+                    <ul class="requirements-list"><li>iOS 16.2 or later</li><li>iCloud account enabled</li><li>Internet connection for AI features</li><li>At least 50 MB free storage</li></ul>
+                </section>
 
-                    <!-- FAQ Section -->
-                    <section class="section">
-                        <h2 class="section-title">Frequently Asked Questions</h2>
+                <section class="section-block">
+                    <span class="kicker">Guidance</span>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <div class="faq-items">
+                        <div class="faq-item"><button class="faq-toggle" type="button" aria-expanded="false" aria-controls="cv-faq-1"><span>How do I create my first CV?</span><span class="chevron" aria-hidden="true">▼</span></button><div class="faq-content" id="cv-faq-1" hidden><ol><li>Open CVAgent and tap <strong>Create New CV</strong>.</li><li>Add profile, experience, and education essentials.</li><li>Pick the template that matches your target role.</li><li>Run AI optimization and review each suggestion.</li><li>Export to PDF or share directly from iOS.</li></ol></div></div>
+                        <div class="faq-item"><button class="faq-toggle" type="button" aria-expanded="false" aria-controls="cv-faq-2"><span>How does AI tailoring work?</span><span class="chevron" aria-hidden="true">▼</span></button><div class="faq-content" id="cv-faq-2" hidden><ul><li>Paste the job description in the tailoring flow.</li><li>CVAgent extracts required skills and priority signals.</li><li>It proposes focused edits for impact and relevance.</li><li>Apply, review, and finalize in your own voice.</li></ul></div></div>
+                        <div class="faq-item"><button class="faq-toggle" type="button" aria-expanded="false" aria-controls="cv-faq-3"><span>Why is sync not working across devices?</span><span class="chevron" aria-hidden="true">▼</span></button><div class="faq-content" id="cv-faq-3" hidden><ul><li>Verify every device uses the same Apple ID.</li><li>Enable iCloud Drive in iOS system settings.</li><li>Confirm stable connectivity on each device.</li><li>Wait a few minutes after first-time activation.</li></ul></div></div>
+                        <div class="faq-item"><button class="faq-toggle" type="button" aria-expanded="false" aria-controls="cv-faq-4"><span>What export formats are supported?</span><span class="chevron" aria-hidden="true">▼</span></button><div class="faq-content" id="cv-faq-4" hidden><ul><li>PDF for polished applications.</li><li>DOCX for collaborative edits.</li><li>Markdown for text-first workflows.</li><li>System share sheet for direct delivery.</li></ul></div></div>
+                        <div class="faq-item"><button class="faq-toggle" type="button" aria-expanded="false" aria-controls="cv-faq-5"><span>Can I keep multiple CV versions?</span><span class="chevron" aria-hidden="true">▼</span></button><div class="faq-content" id="cv-faq-5" hidden><ul><li>Create and store role-specific variants.</li><li>Duplicate prior drafts and iterate quickly.</li><li>Label by role, company, or application round.</li></ul></div></div>
+                    </div>
+                    <div id="faq-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+                </section>
 
-                        <div class="faq-items">
-                            <!-- FAQ 1 -->
-                            <div class="faq-item">
-                                <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="cv-faq-1">
-                                    <span class="summary-content">
-                                        <span>How do I create my first CV?</span>
-                                        <span class="chevron" aria-hidden="true">▼</span>
-                                    </span>
-                                </button>
-                                <div class="faq-content" id="cv-faq-1" hidden>
-                                    <p>Getting started with CVAgent is simple:</p>
-                                    <ol>
-                                        <li>Open the app and tap <strong>Create New CV</strong>.</li>
-                                        <li>Enter your personal information, work experience, and education.</li>
-                                        <li>Choose a template style that suits your industry.</li>
-                                        <li>Let CVAgent's AI optimize and polish your content.</li>
-                                        <li>Export your CV as PDF or share directly.</li>
-                                    </ol>
-                                </div>
-                            </div>
-
-                            <!-- FAQ 2 -->
-                            <div class="faq-item">
-                                <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="cv-faq-2">
-                                    <span class="summary-content">
-                                        <span>How does the AI tailoring feature work?</span>
-                                        <span class="chevron" aria-hidden="true">▼</span>
-                                    </span>
-                                </button>
-                                <div class="faq-content" id="cv-faq-2" hidden>
-                                    <p>CVAgent uses advanced AI to customize your CV for specific job applications:</p>
-                                    <ul>
-                                        <li><strong>Paste a Job Description</strong>: Copy the job posting you're
-                                            applying for.</li>
-                                        <li><strong>AI Analysis</strong>: CVAgent identifies key requirements and
-                                            keywords.</li>
-                                        <li><strong>Smart Suggestions</strong>: The app recommends which skills and
-                                            experiences to highlight.</li>
-                                        <li><strong>One-Tap Apply</strong>: Apply suggestions instantly to create a
-                                            tailored version.</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- FAQ 3 -->
-                            <div class="faq-item">
-                                <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="cv-faq-3">
-                                    <span class="summary-content">
-                                        <span>My data isn't syncing between devices</span>
-                                        <span class="chevron" aria-hidden="true">▼</span>
-                                    </span>
-                                </button>
-                                <div class="faq-content" id="cv-faq-3" hidden>
-                                    <p>CVAgent uses <strong>iCloud</strong> to keep your data in sync. If you're
-                                        experiencing issues:</p>
-                                    <ul>
-                                        <li><strong>Check iCloud</strong>: Ensure you are signed in with the same Apple
-                                            ID on all devices.</li>
-                                        <li><strong>Enable iCloud Drive</strong>: Go to iOS Settings > [Your Name] >
-                                            iCloud > iCloud Drive and ensure it's enabled.</li>
-                                        <li><strong>Internet Connection</strong>: Syncing requires an active internet
-                                            connection.</li>
-                                        <li><strong>Wait for Sync</strong>: Initial sync may take a few moments.</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- FAQ 4 -->
-                            <div class="faq-item">
-                                <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="cv-faq-4">
-                                    <span class="summary-content">
-                                        <span>How do I export my CV?</span>
-                                        <span class="chevron" aria-hidden="true">▼</span>
-                                    </span>
-                                </button>
-                                <div class="faq-content" id="cv-faq-4" hidden>
-                                    <p>CVAgent offers multiple export options:</p>
-                                    <ul>
-                                        <li><strong>PDF Export</strong>: Tap the share icon and select "Export as PDF"
-                                            for a professional document.</li>
-                                        <li><strong>Word Document</strong>: Export as DOCX for easy editing in Microsoft
-                                            Word.</li>
-                                        <li><strong>Markdown</strong>: Export as Markdown for version control and web
-                                            use.</li>
-                                        <li><strong>Share Directly</strong>: Use the share sheet to send your CV via
-                                            email, AirDrop, or messaging apps.</li>
-                                        <li><strong>Print</strong>: Connect to a printer and print directly from the
-                                            app.</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- FAQ 5 -->
-                            <div class="faq-item">
-                                <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="cv-faq-5">
-                                    <span class="summary-content">
-                                        <span>Can I create multiple versions of my CV?</span>
-                                        <span class="chevron" aria-hidden="true">▼</span>
-                                    </span>
-                                </button>
-                                <div class="faq-content" id="cv-faq-5" hidden>
-                                    <p>Yes! CVAgent supports creating multiple CV versions:</p>
-                                    <ul>
-                                        <li>Each tailored version is saved separately in your private storage.</li>
-                                        <li>Organize versions by job title, company, or industry.</li>
-                                        <li>Easily duplicate and modify existing CVs.</li>
-                                        <li>Keep track of which version you sent to which company.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Troubleshooting Section -->
-                    <section class="section">
-                        <h2 class="section-title">Troubleshooting</h2>
-
-                        <div class="faq-item">
-                            <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="cv-troubleshoot-1">
-                                <span class="summary-content">
-                                    <span>App freezes or crashes</span>
-                                    <span class="chevron" aria-hidden="true">▼</span>
-                                </span>
-                            </button>
-                            <div class="faq-content" id="cv-troubleshoot-1" hidden>
-                                <ol>
-                                    <li><strong>Force Quit</strong>: Swipe up from the bottom of the screen and pause in
-                                        the middle, then swipe up on the CVAgent app preview to close it.</li>
-                                    <li><strong>Restart</strong>: Relaunch the app.</li>
-                                    <li><strong>Update</strong>: Ensure you are running the latest version from the App
-                                        Store.</li>
-                                    <li><strong>Restart Device</strong>: If issues persist, restart your iPhone or iPad.
-                                    </li>
-                                </ol>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Privacy Section -->
-                    <section class="section">
-                        <h2 class="section-title">Privacy & Security</h2>
-                        <p><strong>Your data is yours.</strong> CVAgent is designed with privacy first.</p>
-                        <ul>
-                            <li>We <strong>do not</strong> collect personal information, usage data, or tracking
-                                analytics.</li>
-                            <li>All your CVs, cover letters, and personal data are stored securely in your private
-                                <strong>iCloud container</strong>.
-                            </li>
-                            <li>AI processing is performed on-device where possible, using selected providers (Gemini,
-                                Grok).</li>
-                            <li>PII is scrubbed before any cloud processing.</li>
-                            <li>Passwords stored securely in your device Keychain.</li>
-                            <li>GDPR-ready and fully compliant with privacy regulations.</li>
-                        </ul>
-                        <p><a href="PrivacyPolicyforCVAgent.html">View full Privacy Policy →</a></p>
-                    </section>
-                </div>
+                <section class="section-block">
+                    <span class="kicker">Trust</span>
+                    <h2 class="section-title">Privacy & Security</h2>
+                    <ul><li>No behavior tracking or ad analytics.</li><li>Data remains in your private iCloud container.</li><li>PII can be scrubbed before AI requests.</li><li>Credentials are protected by iOS Keychain.</li></ul>
+                    <p style="margin-top: 1rem;"><a href="PrivacyPolicyforCVAgent.html" class="btn-primary">View Full Privacy Policy</a></p>
+                </section>
             </main>
 
-            <!-- Footer -->
             <footer>
-                <!-- Contact Section (moved from sidebar) -->
-                <div class="footer-contact-section">
-                    <div class="footer-contact-heading">Have a question?</div>
-                    <p class="footer-contact-text">We're here to help. Reach out anytime.</p>
-                    <a href="mailto:jackyxhb@gmail.com" class="contact-email">Contact Support</a>
-                </div>
-
-                <!-- Footer Links -->
-                <div class="footer-nav-links">
-                    <a href="index.html" class="footer-nav-link">Home</a>
-                    <a href="CVAgentSupport.html" class="footer-nav-link">CVAgent Support</a>
-                    <a href="ETPatternSupport.html" class="footer-nav-link">ETPattern Support</a>
-                    <a href="PrivacyPolicyforCVAgent.html" class="footer-nav-link">CVAgent Privacy</a>
-                    <a href="PrivacyPolicyforETPattern.html" class="footer-nav-link">ETPattern Privacy</a>
-                </div>
-
-                <p class="footer-credit">Made with ❤️ by Jack</p>
+                <div class="footer-contact-section"><div class="footer-contact-heading">Need a direct answer?</div><p class="footer-contact-text">Send your question and we will reply as quickly as possible.</p><a href="mailto:jackyxhb@gmail.com" class="btn-primary">Contact Support</a></div>
+                <div class="footer-nav-links"><a href="index.html" class="footer-nav-link">Home</a><a href="CVAgentSupport.html" class="footer-nav-link">CVAgent Support</a><a href="ETPatternSupport.html" class="footer-nav-link">ETPattern Support</a><a href="PrivacyPolicyforCVAgent.html" class="footer-nav-link">CVAgent Privacy</a><a href="PrivacyPolicyforETPattern.html" class="footer-nav-link">ETPattern Privacy</a></div>
+                <p class="footer-credit">Designed and built by Jack</p>
             </footer>
         </div>
     </div>
-
-    <!-- Theme Toggle Script -->
     <script src="assets/js/theme-toggle.js"></script>
     <script src="assets/js/faq-toggle.js"></script>
 </body>

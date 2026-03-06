@@ -4,44 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Jack's App Portal - Home to CVAgent and ETPattern apps. Find support, privacy policies, and learn more about our iOS applications.">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Jack's App Portal - crafted iOS tools for career and language growth.">
+    <meta name="theme-color" content="#f4f7fb">
     <meta property="og:title" content="Jack's App Portal">
-    <meta property="og:description"
-        content="Discover powerful iOS apps designed to boost your productivity and learning.">
+    <meta property="og:description" content="Precision-crafted support and privacy hub for CVAgent and ETPattern.">
     <meta property="og:type" content="website">
     <title>Jack's App Portal</title>
 
-    <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
-    <link rel="icon" type="image/png" href="assets/images/portal-icon.png?v=2">
-    <link rel="apple-touch-icon" href="assets/images/portal-icon.png?v=2">
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=3">
+    <link rel="icon" type="image/svg+xml" href="assets/images/portal-icon.svg?v=4">
+    <link rel="apple-touch-icon" href="assets/images/portal-icon.svg?v=4">
 
-    <!-- Font Loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/design-system.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/portal-nav.css">
     <link rel="stylesheet" href="assets/css/portal-index.css">
-
 </head>
 
-<body>
+<body class="page-home">
     <div class="wrapper">
-        <!-- Navigation Bar -->
-        <nav class="portal-nav">
+        <nav class="portal-nav" aria-label="Primary">
             <div class="portal-nav-content">
-                <a href="index.html" class="portal-nav-brand">
-                    <span>Home</span>
-                </a>
+                <a href="index.html" class="portal-nav-brand">Portal Home</a>
                 <div class="portal-nav-spacer"></div>
-                <nav class="portal-nav-menu">
+                <div class="portal-nav-menu">
                     <a href="CVAgentSupport.html" class="portal-nav-link">
                         <span class="portal-nav-link-icon cvagent"></span>
                         <span>CVAgent</span>
@@ -50,7 +41,7 @@
                         <span class="portal-nav-link-icon etpattern"></span>
                         <span>ETPattern</span>
                     </a>
-                </nav>
+                </div>
                 <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle theme">
                     <span class="icon-sun">☀️</span>
                     <span class="icon-moon">🌙</span>
@@ -59,67 +50,59 @@
         </nav>
 
         <div class="container">
-            <!-- Hero Section -->
-            <header class="hero">
-                <h1 class="hero-title">Agentic Way, Better Life.</h1>
-                <p class="hero-subtitle">Discover AI-powered iOS apps to boost your productivity and learning. Built
-                    with
-                    privacy in mind.</p>
-            </header>
-
-            <!-- Apps Grid -->
-            <main class="apps-grid">
-                <!-- CVAgent Card -->
-                <article class="glass-card cvagent app-card">
-                    <div class="app-card-header">
-                        <div class="app-icon" aria-label="CVAgent app icon"></div>
-                        <h2 class="app-title">CVAgent</h2>
+            <main class="main-shell portal-layout">
+                <header class="panel hero-panel portal-hero">
+                    <span class="eyebrow">App Support Hub</span>
+                    <h1 class="hero-title">Agentic way, <span class="gradient-text">better life</span>.</h1>
+                    <p class="hero-subtitle portal-hero-note">A calm, high-precision support hub for CVAgent and ETPattern. Every path is tuned for fast scanning, low friction, and confident action.</p>
+                    <div class="portal-stats">
+                        <span class="stat-chip">Privacy-first</span>
+                        <span class="stat-chip">iOS-native</span>
+                        <span class="stat-chip">Focused documentation</span>
+                        <span class="stat-chip">Unified support flow</span>
                     </div>
-                    <p class="description">Your AI-powered assistant for creating professional, tailored CVs and cover
-                        letters that stand out.</p>
-                    <nav class="card-links">
-                        <a href="CVAgentSupport.html" class="card-link">
-                            <span>Support & FAQ</span>
-                            <span class="arrow">→</span>
-                        </a>
-                        <a href="PrivacyPolicyforCVAgent.html" class="card-link">
-                            <span>Privacy Policy</span>
-                            <span class="arrow">→</span>
-                        </a>
-                    </nav>
-                </article>
+                </header>
 
-                <!-- ETPattern Card -->
-                <article class="glass-card etpattern app-card">
-                    <div class="app-card-header">
-                        <div class="app-icon" aria-label="ETPattern app icon"></div>
-                        <h2 class="app-title">ETPattern</h2>
-                    </div>
-                    <p class="description">Master English through effective pattern recognition and spaced repetition
-                        learning.</p>
-                    <nav class="card-links">
-                        <a href="ETPatternSupport.html" class="card-link">
-                            <span>Support & FAQ</span>
-                            <span class="arrow">→</span>
-                        </a>
-                        <a href="PrivacyPolicyforETPattern.html" class="card-link">
-                            <span>Privacy Policy</span>
-                            <span class="arrow">→</span>
-                        </a>
-                    </nav>
-                </article>
+                <section class="card-grid" aria-label="Apps">
+                    <article class="card brand-card app-card cvagent">
+                        <div class="app-header">
+                            <div class="app-icon" aria-label="CVAgent icon"></div>
+                            <div class="stack-sm">
+                                <h2 class="app-title">CVAgent</h2>
+                                <p class="app-meta">AI CV and cover letter studio</p>
+                            </div>
+                        </div>
+                        <p>Your writing partner for CV and cover letter execution. Build role-specific versions quickly while keeping tone, structure, and quality under control.</p>
+                        <div class="link-list" style="margin-top: 1rem;">
+                            <a href="CVAgentSupport.html" class="pill-link">Support & FAQ <span aria-hidden="true">→</span></a>
+                            <a href="PrivacyPolicyforCVAgent.html" class="pill-link">Privacy Policy <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+
+                    <article class="card brand-card app-card etpattern">
+                        <div class="app-header">
+                            <div class="app-icon" aria-label="ETPattern icon"></div>
+                            <div class="stack-sm">
+                                <h2 class="app-title">ETPattern</h2>
+                                <p class="app-meta">Pattern-first language training</p>
+                            </div>
+                        </div>
+                        <p>Train English through sentence patterns, guided repetition, and measurable progress. Built for deliberate practice with a precise modern workflow.</p>
+                        <div class="link-list" style="margin-top: 1rem;">
+                            <a href="ETPatternSupport.html" class="pill-link">Support & FAQ <span aria-hidden="true">→</span></a>
+                            <a href="PrivacyPolicyforETPattern.html" class="pill-link">Privacy Policy <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+                </section>
             </main>
 
-            <!-- Footer -->
             <footer>
-                <!-- Contact Section -->
                 <div class="footer-contact-section">
-                    <div class="footer-contact-heading">Have a question?</div>
-                    <p class="footer-contact-text">We're here to help. Reach out anytime.</p>
-                    <a href="mailto:jackyxhb@gmail.com" class="contact-email">Contact Support</a>
+                    <div class="footer-contact-heading">Need direct help?</div>
+                    <p class="footer-contact-text">Reach out for support, privacy clarification, or product feedback.</p>
+                    <a href="mailto:jackyxhb@gmail.com" class="btn-primary">Contact Support</a>
                 </div>
 
-                <!-- Footer Links -->
                 <div class="footer-nav-links">
                     <a href="index.html" class="footer-nav-link">Home</a>
                     <a href="CVAgentSupport.html" class="footer-nav-link">CVAgent Support</a>
@@ -128,12 +111,11 @@
                     <a href="PrivacyPolicyforETPattern.html" class="footer-nav-link">ETPattern Privacy</a>
                 </div>
 
-                <p class="footer-credit">Made with ❤️ by Jack</p>
+                <p class="footer-credit">Designed and built by Jack</p>
             </footer>
         </div>
     </div>
 
-    <!-- Theme Toggle Script -->
     <script src="assets/js/theme-toggle.js"></script>
 </body>
 

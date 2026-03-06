@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Jack Portal Icon</title>
+  <desc id="desc">Rounded square dual-gradient icon bridging CVAgent and ETPattern motifs.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#245ef0"/>
+      <stop offset="52%" stop-color="#0bb0cf"/>
+      <stop offset="100%" stop-color="#4cc68a"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#eaf8ff" stop-opacity="0.96"/>
+    </linearGradient>
+  </defs>
+  <rect x="28" y="28" width="456" height="456" rx="116" fill="url(#bg)"/>
+  <g fill="none" stroke="#e3fff5" stroke-linecap="round" stroke-width="18" opacity="0.95">
+    <path d="M322 147c36 0 36 52 72 52"/>
+    <path d="M322 214c36 0 36 52 72 52"/>
+    <path d="M322 281c36 0 36 52 72 52"/>
+  </g>
+  <g>
+    <path d="M135 119h132l58 58v201c0 20-16 36-36 36H135c-20 0-36-16-36-36V155c0-20 16-36 36-36z" fill="url(#paper)"/>
+    <path d="M267 119v58h58" fill="none" stroke="#8ac2ef" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M153 226h119M153 270h119M153 314h84" fill="none" stroke="#336cbf" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

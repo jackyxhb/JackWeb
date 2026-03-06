@@ -4,22 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="ETPattern Support - Get help with ETPattern, our advanced English language learning app using spaced repetition. FAQs, troubleshooting, and support resources.">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="ETPattern Support - answers, troubleshooting, and privacy guidance.">
+    <meta name="theme-color" content="#f4f7fb">
     <title>ETPattern Support & FAQ</title>
-
-    <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
-    <link rel="icon" type="image/png" href="assets/images/etpattern-icon.png?v=2">
-    <link rel="apple-touch-icon" href="assets/images/etpattern-icon.png?v=2">
-
-    <!-- Font Loading -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=3">
+    <link rel="icon" type="image/svg+xml" href="assets/images/etpattern-icon.svg?v=4">
+    <link rel="apple-touch-icon" href="assets/images/etpattern-icon.svg?v=4">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/design-system.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/animations.css">
@@ -27,286 +20,73 @@
     <link rel="stylesheet" href="assets/css/support-page.css">
 </head>
 
-<body class="etpattern">
+<body class="etpattern page-support">
     <div class="wrapper">
-        <!-- Navigation Bar -->
-        <nav class="portal-nav">
+        <nav class="portal-nav" aria-label="Primary">
             <div class="portal-nav-content">
-                <a href="index.html" class="portal-nav-brand">
-                    <span>Home</span>
-                </a>
+                <a href="index.html" class="portal-nav-brand">Portal Home</a>
                 <div class="portal-nav-spacer"></div>
-                <nav class="portal-nav-menu">
-                    <a href="CVAgentSupport.html" class="portal-nav-link">
-                        <span class="portal-nav-link-icon cvagent"></span>
-                        <span>CVAgent</span>
-                    </a>
-                    <a href="ETPatternSupport.html" class="portal-nav-link active">
-                        <span class="portal-nav-link-icon etpattern"></span>
-                        <span>ETPattern</span>
-                    </a>
-                </nav>
-                <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle theme">
-                    <span class="icon-sun">☀️</span>
-                    <span class="icon-moon">🌙</span>
-                </button>
+                <div class="portal-nav-menu">
+                    <a href="CVAgentSupport.html" class="portal-nav-link"><span class="portal-nav-link-icon cvagent"></span><span>CVAgent</span></a>
+                    <a href="ETPatternSupport.html" class="portal-nav-link active"><span class="portal-nav-link-icon etpattern"></span><span>ETPattern</span></a>
+                </div>
+                <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle theme"><span class="icon-sun">☀️</span><span class="icon-moon">🌙</span></button>
             </div>
         </nav>
 
         <div class="container">
-            <!-- Hero Section -->
-            <section class="hero-section">
-                <div class="app-header">
-                    <div class="hero-icon" aria-label="ETPattern icon"></div>
-                    <div class="hero-content">
-                        <h1>ETPattern Support</h1>
-                        <span class="subtitle">Learn English with smart pattern matching</span>
+            <main class="main-shell support-main">
+                <header class="panel hero-panel support-hero">
+                    <span class="eyebrow">Support Center</span>
+                    <div class="app-header">
+                        <div class="app-icon" aria-label="ETPattern icon"></div>
+                        <div class="stack-sm">
+                            <h1 class="hero-title"><span class="gradient-text">ETPattern Support</span></h1>
+                            <p class="hero-subtitle">Build fluent pattern memory with spaced repetition, clear progress signals, and privacy-first sync.</p>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </header>
 
-            <!-- Main Content -->
-            <main class="reading-column content-wrapper">
-                <div class="main-content">
-                    <!-- Features Section -->
-                    <section class="section">
-                        <h2 class="section-title">Key Features</h2>
-                        <div class="features-grid">
-                            <div class="feature-card">
-                                <div class="feature-title">300+ Patterns</div>
-                            </div>
-                            <div class="feature-card">
-                                <div class="feature-title">FSRS Algorithm</div>
-                            </div>
-                            <div class="feature-card">
-                                <div class="feature-title">Translation API</div>
-                            </div>
-                            <div class="feature-card">
-                                <div class="feature-title">CloudKit Sync</div>
-                            </div>
-                        </div>
-                    </section>
+                <section class="section-block">
+                    <span class="kicker">Capabilities</span>
+                    <h2 class="section-title">Core Capabilities</h2>
+                    <div class="features-grid"><div class="feature-tile">300+ patterns</div><div class="feature-tile">FSRS algorithm</div><div class="feature-tile">Translation API</div><div class="feature-tile">CloudKit sync</div></div>
+                </section>
 
-                    <!-- Requirements Box (moved from sidebar) -->
-                    <section class="section">
-                        <div class="callout accent-etpattern">
-                            <div class="callout-title requirements-title">Requirements</div>
-                            <ul class="requirements-list">
-                                <li>iOS 18 or later</li>
-                                <li>iCloud account</li>
-                                <li>Internet connection</li>
-                                <li>100 MB free space</li>
-                            </ul>
-                        </div>
-                    </section>
+                <section class="section-block callout">
+                    <span class="kicker">System Requirements</span>
+                    <h2 class="section-title">Before You Start</h2>
+                    <ul class="requirements-list"><li>iOS 18 or later</li><li>iCloud account enabled</li><li>Internet for translation and sync</li><li>At least 100 MB free storage</li></ul>
+                </section>
 
-                    <!-- FAQ Section -->
-                    <section class="section">
-                        <h2 class="section-title">Frequently Asked Questions</h2>
+                <section class="section-block">
+                    <span class="kicker">Guidance</span>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <div class="faq-items">
+                        <div class="faq-item"><button class="faq-toggle" type="button" aria-expanded="false" aria-controls="et-faq-1"><span>How can I import new flashcards?</span><span class="chevron" aria-hidden="true">▼</span></button><div class="faq-content" id="et-faq-1" hidden><ol><li>Open <strong>Menu</strong> and choose <strong>Import</strong>.</li><li>Select a CSV file using <code>Front;;Back;;Tags</code> format.</li><li>Confirm import and wait for sync completion.</li></ol></div></div>
+                        <div class="faq-item"><button class="faq-toggle" type="button" aria-expanded="false" aria-controls="et-faq-2"><span>Progress does not sync between devices</span><span class="chevron" aria-hidden="true">▼</span></button><div class="faq-content" id="et-faq-2" hidden><ul><li>Use the same Apple ID on each device.</li><li>Enable iCloud Drive and CloudKit permissions.</li><li>Make sure both devices are online.</li><li>Pull to refresh from the app dashboard.</li></ul></div></div>
+                        <div class="faq-item"><button class="faq-toggle" type="button" aria-expanded="false" aria-controls="et-faq-3"><span>Text-to-Speech audio is missing</span><span class="chevron" aria-hidden="true">▼</span></button><div class="faq-content" id="et-faq-3" hidden><ul><li>Disable silent mode on your device.</li><li>Raise in-app and system volume.</li><li>Try another voice in settings.</li><li>Confirm speaker output in another app.</li></ul></div></div>
+                        <div class="faq-item"><button class="faq-toggle" type="button" aria-expanded="false" aria-controls="et-faq-4"><span>What do maturity levels mean?</span><span class="chevron" aria-hidden="true">▼</span></button><div class="faq-content" id="et-faq-4" hidden><ul><li><strong>New</strong>: not reviewed yet.</li><li><strong>Learning</strong>: in active reinforcement cycles.</li><li><strong>Mature</strong>: stable long-term recall.</li></ul></div></div>
+                        <div class="faq-item"><button class="faq-toggle" type="button" aria-expanded="false" aria-controls="et-faq-5"><span>How do I monitor learning progress?</span><span class="chevron" aria-hidden="true">▼</span></button><div class="faq-content" id="et-faq-5" hidden><ul><li>Track streaks and daily review cadence.</li><li>Use the Mastery Dashboard by maturity level.</li><li>Inspect trend lines over longer windows.</li><li>Export progress data when needed.</li></ul></div></div>
+                    </div>
+                    <div id="faq-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+                </section>
 
-                        <div class="faq-items">
-                            <!-- FAQ 1 -->
-                            <div class="faq-item">
-                                <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="et-faq-1">
-                                    <span class="summary-content">
-                                        <span class="faq-icon">📥</span>
-                                        <span>How do I import new flashcards?</span>
-                                        <span class="chevron" aria-hidden="true">▼</span>
-                                    </span>
-                                </button>
-                                <div class="faq-content" id="et-faq-1" hidden>
-                                    <p>You can easily import custom decks using our CSV import feature:</p>
-                                    <ol>
-                                        <li>Tap the <strong>Menu</strong> button (top right corner).</li>
-                                        <li>Select <strong>Import</strong>.</li>
-                                        <li>Choose a properly formatted CSV file from your files.
-                                            <ul>
-                                                <li><strong>Format</strong>: <code>Front;;Back;;Tags</code> (Double
-                                                    semicolon separator)</li>
-                                                <li><strong>Example</strong>: <code>Hello;;Hola;;Greeting</code></li>
-                                            </ul>
-                                        </li>
-                                        <li>The cards will be added to your deck and synced across devices.</li>
-                                    </ol>
-                                </div>
-                            </div>
-
-                            <!-- FAQ 2 -->
-                            <div class="faq-item">
-                                <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="et-faq-2">
-                                    <span class="summary-content">
-                                        <span class="faq-icon">☁️</span>
-                                        <span>My progress isn't syncing between my iPhone and iPad</span>
-                                        <span class="chevron" aria-hidden="true">▼</span>
-                                    </span>
-                                </button>
-                                <div class="faq-content" id="et-faq-2" hidden>
-                                    <p>ETPattern uses <strong>iCloud/CloudKit</strong> to keep your data in sync. If
-                                        you're experiencing issues:</p>
-                                    <ul>
-                                        <li><strong>Check iCloud</strong>: Ensure you are signed in with the same Apple
-                                            ID on both devices.</li>
-                                        <li><strong>Enable iCloud Drive</strong>: Go to iOS Settings > [Your Name] >
-                                            iCloud > iCloud Drive and ensure it's enabled.</li>
-                                        <li><strong>Internet Connection</strong>: Syncing requires an active internet
-                                            connection.</li>
-                                        <li><strong>Wait for Sync</strong>: Initial sync may take a few moments.</li>
-                                        <li><strong>Force Refresh</strong>: Pull down to refresh in the app's main
-                                            screen.</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- FAQ 3 -->
-                            <div class="faq-item">
-                                <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="et-faq-3">
-                                    <span class="summary-content">
-                                        <span class="faq-icon">🔊</span>
-                                        <span>I can't hear the audio/Text-to-Speech</span>
-                                        <span class="chevron" aria-hidden="true">▼</span>
-                                    </span>
-                                </button>
-                                <div class="faq-content" id="et-faq-3" hidden>
-                                    <ul>
-                                        <li><strong>Silent Mode</strong>: Check if your device's physical silent switch
-                                            is on. Flip it to the unmuted position.</li>
-                                        <li><strong>In-App Settings</strong>: Open the app <strong>Settings</strong> and
-                                            ensure the <strong>Volume</strong> slider is turned up.</li>
-                                        <li><strong>Voice Selection</strong>: Try selecting a different voice in the
-                                            Settings menu if the current one isn't working.</li>
-                                        <li><strong>Device Volume</strong>: Use the side volume buttons to increase
-                                            overall device volume.</li>
-                                        <li><strong>Speaker Check</strong>: Play audio from another app to verify your
-                                            device speakers work.</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- FAQ 4 -->
-                            <div class="faq-item">
-                                <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="et-faq-4">
-                                    <span class="summary-content">
-                                        <span class="faq-icon">📊</span>
-                                        <span>What do the different "Maturity" levels mean?</span>
-                                        <span class="chevron" aria-hidden="true">▼</span>
-                                    </span>
-                                </button>
-                                <div class="faq-content" id="et-faq-4" hidden>
-                                    <p>In the <strong>Mastery Dashboard</strong>, we categorize cards based on how well
-                                        you know them:</p>
-                                    <ul>
-                                        <li><strong>New</strong>: Cards you haven't studied yet. These are ready for
-                                            your first review.</li>
-                                        <li><strong>Learning</strong>: Cards you are currently studying but haven't
-                                            fully memorized. Review them regularly.</li>
-                                        <li><strong>Mature</strong>: Cards you have correctly recalled consistently over
-                                            a long period. These need less frequent review.</li>
-                                    </ul>
-                                    <p>The app uses the FSRS (Free Spaced Repetition Scheduler) algorithm to optimize
-                                        your review schedule automatically.</p>
-                                </div>
-                            </div>
-
-                            <!-- FAQ 5 -->
-                            <div class="faq-item">
-                                <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="et-faq-5">
-                                    <span class="summary-content">
-                                        <span class="faq-icon">📈</span>
-                                        <span>How can I track my learning progress?</span>
-                                        <span class="chevron" aria-hidden="true">▼</span>
-                                    </span>
-                                </button>
-                                <div class="faq-content" id="et-faq-5" hidden>
-                                    <p>ETPattern provides comprehensive progress tracking:</p>
-                                    <ul>
-                                        <li><strong>Daily Streak</strong>: Track how many consecutive days you've
-                                            studied.</li>
-                                        <li><strong>Mastery Dashboard</strong>: See breakdown of cards by maturity
-                                            level.</li>
-                                        <li><strong>Statistics</strong>: View cards learned over time with detailed
-                                            analytics.</li>
-                                        <li><strong>Reviews Completed</strong>: Track total reviews and learning
-                                            consistency.</li>
-                                        <li><strong>Export Reports</strong>: Export your progress data for personal
-                                            records.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Troubleshooting Section -->
-                    <section class="section">
-                        <h2 class="section-title">Troubleshooting</h2>
-
-                        <div class="faq-item">
-                            <button class="faq-toggle" type="button" aria-expanded="false" aria-controls="et-troubleshoot-1">
-                                <span class="summary-content">
-                                    <span class="faq-icon">⚠️</span>
-                                    <span>App freezes or crashes</span>
-                                    <span class="chevron" aria-hidden="true">▼</span>
-                                </span>
-                            </button>
-                            <div class="faq-content" id="et-troubleshoot-1" hidden>
-                                <ol>
-                                    <li><strong>Force Quit</strong>: Swipe up from the bottom of the screen and pause in
-                                        the middle, then swipe up on the ETPattern app preview to close it.</li>
-                                    <li><strong>Restart</strong>: Relaunch the app.</li>
-                                    <li><strong>Update</strong>: Ensure you are running the latest version from the App
-                                        Store.</li>
-                                    <li><strong>Restart Device</strong>: If issues persist, restart your iPhone or iPad.
-                                    </li>
-                                    <li><strong>Clear Cache</strong>: Go to Settings > ETPattern and clear cached data
-                                        if available.</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Privacy Section -->
-                    <section class="section">
-                        <h2 class="section-title">Privacy & Security</h2>
-                        <p><strong>Your data is yours.</strong> ETPattern is designed with privacy first.</p>
-                        <ul>
-                            <li>We <strong>do not</strong> collect personal information, usage data, or tracking
-                                analytics.</li>
-                            <li>All your decks, study history, and progress are stored securely in your private
-                                <strong>iCloud container</strong>.
-                            </li>
-                            <li>Learning happens <strong>on-device</strong> - no data sent to external servers.</li>
-                            <li>Translation features use secure API calls with encrypted data.</li>
-                            <li>Built with <strong>SwiftUI and SwiftData</strong> for maximum security.</li>
-                            <li>GDPR-ready and fully compliant with privacy regulations.</li>
-                        </ul>
-                        <p><a href="PrivacyPolicyforETPattern.html">View full Privacy Policy →</a></p>
-                    </section>
-                </div>
+                <section class="section-block">
+                    <span class="kicker">Trust</span>
+                    <h2 class="section-title">Privacy & Security</h2>
+                    <ul><li>No behavior tracking or advertising SDKs.</li><li>Decks and progress stay in your private iCloud space.</li><li>Learning logic runs on-device.</li><li>External translation requests are encrypted.</li></ul>
+                    <p style="margin-top: 1rem;"><a href="PrivacyPolicyforETPattern.html" class="btn-primary">View Full Privacy Policy</a></p>
+                </section>
             </main>
 
-            <!-- Footer -->
             <footer>
-                <!-- Contact Section (moved from sidebar) -->
-                <div class="footer-contact-section">
-                    <div class="footer-contact-heading">Have a question?</div>
-                    <p class="footer-contact-text">We're here to help. Reach out anytime.</p>
-                    <a href="mailto:jackyxhb@gmail.com" class="contact-email">Contact Support</a>
-                </div>
-
-                <!-- Footer Links -->
-                <div class="footer-nav-links">
-                    <a href="index.html" class="footer-nav-link">Home</a>
-                    <a href="CVAgentSupport.html" class="footer-nav-link">CVAgent Support</a>
-                    <a href="ETPatternSupport.html" class="footer-nav-link">ETPattern Support</a>
-                    <a href="PrivacyPolicyforCVAgent.html" class="footer-nav-link">CVAgent Privacy</a>
-                    <a href="PrivacyPolicyforETPattern.html" class="footer-nav-link">ETPattern Privacy</a>
-                </div>
-
-                <p class="footer-credit">Made with ❤️ by Jack</p>
+                <div class="footer-contact-section"><div class="footer-contact-heading">Need a direct answer?</div><p class="footer-contact-text">Send your question and we will reply as quickly as possible.</p><a href="mailto:jackyxhb@gmail.com" class="btn-primary">Contact Support</a></div>
+                <div class="footer-nav-links"><a href="index.html" class="footer-nav-link">Home</a><a href="CVAgentSupport.html" class="footer-nav-link">CVAgent Support</a><a href="ETPatternSupport.html" class="footer-nav-link">ETPattern Support</a><a href="PrivacyPolicyforCVAgent.html" class="footer-nav-link">CVAgent Privacy</a><a href="PrivacyPolicyforETPattern.html" class="footer-nav-link">ETPattern Privacy</a></div>
+                <p class="footer-credit">Designed and built by Jack</p>
             </footer>
         </div>
     </div>
-
-    <!-- Theme Toggle Script -->
     <script src="assets/js/theme-toggle.js"></script>
     <script src="assets/js/faq-toggle.js"></script>
 </body>

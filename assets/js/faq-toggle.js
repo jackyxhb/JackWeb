@@ -1,4 +1,21 @@
 const faqToggles = Array.from(document.querySelectorAll('.faq-toggle'));
+const announcer = document.getElementById('faq-announcer');
+
+const announceFaqState = (button, expanded) => {
+  if (!announcer) {
+    return;
+  }
+
+  const labelNode = button.querySelector('span');
+  const label = labelNode ? labelNode.textContent.trim() : 'FAQ item';
+  const state = expanded ? 'expanded' : 'collapsed';
+
+  // Clear first so screen readers re-announce repeated interactions.
+  announcer.textContent = '';
+  requestAnimationFrame(() => {
+    announcer.textContent = `${label} ${state}.`;
+  });
+};
 
 const setExpandedState = (button, expanded) => {
   const contentId = button.getAttribute('aria-controls');
@@ -36,5 +53,6 @@ faqToggles.forEach((button) => {
     });
 
     setExpandedState(button, !isExpanded);
+    announceFaqState(button, !isExpanded);
   });
 });
