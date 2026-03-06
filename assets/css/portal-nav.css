@@ -49,6 +49,10 @@
     transform: translateY(-1px);
 }
 
+.portal-nav-brand:focus-visible {
+    background: var(--bg-overlay-light);
+}
+
 .portal-nav-spacer {
     flex: 1;
 }
@@ -78,6 +82,11 @@
     background: var(--bg-overlay-light);
 }
 
+.portal-nav-link:focus-visible {
+    color: var(--text-primary);
+    background: var(--bg-overlay-light);
+}
+
 .portal-nav-link-icon {
     width: 18px;
     height: 18px;
@@ -88,11 +97,11 @@
 }
 
 .portal-nav-link-icon.cvagent {
-    background-image: url('../images/cvagent-icon.svg');
+    background-image: url('../images/cvagent-icon.png');
 }
 
 .portal-nav-link-icon.etpattern {
-    background-image: url('../images/etpattern-icon.svg');
+    background-image: url('../images/etpattern-icon.png');
 }
 
 @media (max-width: 768px) {

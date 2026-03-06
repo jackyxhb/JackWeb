@@ -15,8 +15,8 @@
 
   /* Text */
   --text-primary: #0f1b2d;
-  --text-secondary: #2c3f59;
-  --text-muted: #5e728f;
+  --text-secondary: #243752;
+  --text-muted: #4d6484;
   --text-inverse: #f4f8ff;
 
   /* Neutrals */
@@ -163,8 +163,8 @@
   --bg-overlay: rgba(147, 188, 255, 0.08);
 
   --text-primary: #e8f0ff;
-  --text-secondary: #c7d5ec;
-  --text-muted: #9fb2d1;
+  --text-secondary: #d3def0;
+  --text-muted: #afc0da;
   --text-inverse: #0e1727;
 
   --line-subtle: rgba(164, 191, 230, 0.2);
@@ -281,6 +281,12 @@ a {
 :focus-visible {
   outline: 2px solid var(--brand-ring);
   outline-offset: 2px;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--brand-ring) 28%, transparent);
+}
+
+a:focus-visible,
+button:focus-visible {
+  border-radius: 0.45rem;
 }
 
 @media (max-width: 1024px) {
@@ -296,5 +302,15 @@ a {
 
   body {
     font-size: 0.98rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    transition: none;
   }
 }

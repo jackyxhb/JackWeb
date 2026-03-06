@@ -635,7 +635,7 @@
 }
 
 .faq-toggle:focus-visible {
-  outline: 2px solid var(--color-navy);
+  outline: 2px solid var(--brand-ring);
   outline-offset: 2px;
   border-radius: var(--radius-md);
 }

@@ -53,16 +53,24 @@
 }
 
 .cvagent .app-icon {
-  background-image: url('../images/cvagent-icon.svg');
+  background-image: url('../images/cvagent-icon.png');
 }
 
 .etpattern .app-icon {
-  background-image: url('../images/etpattern-icon.svg');
+  background-image: url('../images/etpattern-icon.png');
 }
 
 .stack-sm {
   display: grid;
   gap: 0.28rem;
+}
+
+.support-hero-actions {
+  margin-top: var(--space-3);
+}
+
+.support-hero-actions .btn-primary {
+  white-space: nowrap;
 }
 
 .hero-title {
@@ -217,6 +225,10 @@ footer {
   color: var(--text-primary);
 }
 
+.footer-nav-link:focus-visible {
+  color: var(--text-primary);
+}
+
 .footer-credit {
   margin-top: var(--space-4);
   text-align: center;
@@ -240,6 +252,11 @@ footer {
 
   .hero-subtitle {
     font-size: 0.96rem;
+  }
+
+  .support-hero-actions .btn-primary {
+    width: 100%;
+    justify-content: center;
   }
 }
 

@@ -125,11 +125,11 @@
 }
 
 .cvagent .app-icon {
-  background-image: url('../images/cvagent-icon.svg');
+  background-image: url('../images/cvagent-icon.png');
 }
 
 .etpattern .app-icon {
-  background-image: url('../images/etpattern-icon.svg');
+  background-image: url('../images/etpattern-icon.png');
 }
 
 .app-title {
@@ -161,6 +161,12 @@
 }
 
 .pill-link:hover {
+  color: var(--text-primary);
+  border-color: var(--line-strong);
+  background: var(--bg-overlay-light);
+}
+
+.pill-link:focus-visible {
   color: var(--text-primary);
   border-color: var(--line-strong);
   background: var(--bg-overlay-light);
@@ -206,6 +212,10 @@ footer {
 }
 
 .footer-nav-link:hover {
+  color: var(--text-primary);
+}
+
+.footer-nav-link:focus-visible {
   color: var(--text-primary);
 }
 

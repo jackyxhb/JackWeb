@@ -244,4 +244,10 @@ details[open] .chevron {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+
+  .hover-lift:hover,
+  .hover-scale:hover {
+    transform: none !important;
+    box-shadow: inherit;
+  }
 }

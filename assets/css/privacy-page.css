@@ -90,6 +90,10 @@ article.section-block {
   color: var(--text-primary);
 }
 
+.inline-toc a:focus-visible {
+  color: var(--text-primary);
+}
+
 article .section-block {
   border-top: 1px solid var(--line-subtle);
   padding-top: var(--space-5);
@@ -227,6 +231,10 @@ footer {
 }
 
 .footer-nav-link:hover {
+  color: var(--text-primary);
+}
+
+.footer-nav-link:focus-visible {
   color: var(--text-primary);
 }
 
